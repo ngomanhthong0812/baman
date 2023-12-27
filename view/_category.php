@@ -219,10 +219,13 @@
                                     </path>
                                 </svg>
                             </li>
-                            <li class="list-none gap-[5px] flex text-[13px] items-center ml-[10px]">
-                                Sort by latest
-                                <i class='bx bx-chevron-down'></i>
-                            </li>
+                        <form id="sortByForm" action="category.php" method="get">
+                           <select id="sortBy" name="orderBy">
+                             <option class="text-[12px]" <?php if(isset($_GET['orderBy'] )&& $_GET['orderBy'] == 'latest' || !isset($_GET['orderBy'] ) ){echo 'selected'; } ?> value="latest">Sort by latest</option>
+                             <option class="text-[12px]" <?php if(isset($_GET['orderBy'] )&& $_GET['orderBy'] == 'ascending'){echo 'selected'; } ?> value="ascending">Price sort: ascending</option>
+                             <option class="text-[12px]" <?php if(isset($_GET['orderBy'] )&& $_GET['orderBy'] == 'descending'){echo 'selected'; } ?> value="descending">Price sort: descending</option>
+                            </select>
+                        </form>
                         </div>
 
                     </div>

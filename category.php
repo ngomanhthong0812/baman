@@ -20,17 +20,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         header('location: category.php');
     }
 
-        // var_dump($price). die();
+    // var_dump($price). die();
 
     $productPriceFilter = get_products_by_price($price);
-        // var_dump($productPriceFilter) . die();
+    // var_dump($productPriceFilter) . die();
 
     $page = 1;
     if (isset($_GET['page'])) {
-        $page = intval($_GET['page']) > 0 ? intval($_GET['page'])  : 1;
+        $page = intval($_GET['page']) > 0 ? intval($_GET['page']) : 1;
     }
 
-    $productList = get_products_by_page($page);
+    if (isset($_GET['orderBy'])) {
+        switch ($_GET['orderBy']) {
+            case 'latest':
+                $productList = get_products_by_page_sort_latest($page);
+                break;
+            case 'ascending':
+                $productList = get_products_by_page_sort_price_asc($page);
+                break;
+            case 'descending':
+                $productList = get_products_by_page_sort_price_desc($page);
+                break;
+
+            default:
+                # code...
+                break;
+        }
+    } else {
+        $productList = get_products_by_page_sort_latest($page);
+    }
 
 
     include_once './view/_category.php';

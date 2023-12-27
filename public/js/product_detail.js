@@ -581,3 +581,7 @@ slider.noUiSlider.on('update', function (values, handle) {
   minPriceDataInput.value = min;
   maxPriceDataInput.value = max;
 });
+
+document.getElementById('sortBy').addEventListener('change', function() {
+  document.getElementById('sortByForm').submit();
+});

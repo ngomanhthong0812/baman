@@ -74,6 +74,130 @@ function get_products_by_page($page)
     return $productList;
 }
 
+function get_products_by_page_sort_price_asc($page)
+{
+    global $pdo;
+
+    $perPage = 8;
+    $begin = ($page - 1) * $perPage;
+
+    $sql = "SELECT PRODUCTS.*, CATEGORIES.NAME AS category_name
+    FROM PRODUCTS
+    LEFT JOIN CATEGORIES ON PRODUCTS.category_id = CATEGORIES.id
+    ORDER BY PRICE ASC
+    LIMIT $begin, $perPage";
+
+    $stmt = $pdo->prepare($sql);
+
+    $stmt->execute();
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+    // Lấy danh sách kết quả
+    $result = $stmt->fetchAll();
+    $productList = array();
+
+    if (count($result) > 0) {
+        // Hiển thị dữ liệu của bảng
+        foreach ($result as $row) {
+            $product = array(
+                "id" => $row["id"],
+                "image" => $row["image"],
+                "name" => $row["name"],
+                "description" => $row["description"],
+                "price" => $row["price"],
+                "quantity" => $row["quantity"],
+                "category_name" => $row["category_name"]
+            );
+            array_push($productList, $product);
+        }
+    }
+
+    return $productList;
+}
+function get_products_by_page_sort_price_desc($page)
+{
+    global $pdo;
+
+    $perPage = 8;
+    $begin = ($page - 1) * $perPage;
+
+    $sql = "SELECT PRODUCTS.*, CATEGORIES.NAME AS category_name
+    FROM PRODUCTS
+    LEFT JOIN CATEGORIES ON PRODUCTS.category_id = CATEGORIES.id
+    ORDER BY PRICE DESC
+    LIMIT $begin, $perPage";
+
+    $stmt = $pdo->prepare($sql);
+
+    $stmt->execute();
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+    // Lấy danh sách kết quả
+    $result = $stmt->fetchAll();
+    $productList = array();
+
+    if (count($result) > 0) {
+        // Hiển thị dữ liệu của bảng
+        foreach ($result as $row) {
+            $product = array(
+                "id" => $row["id"],
+                "image" => $row["image"],
+                "name" => $row["name"],
+                "description" => $row["description"],
+                "price" => $row["price"],
+                "quantity" => $row["quantity"],
+                "category_name" => $row["category_name"]
+            );
+            array_push($productList, $product);
+        }
+    }
+
+    return $productList;
+}
+
+function get_products_by_page_sort_latest($page)
+{
+    global $pdo;
+
+    $perPage = 8;
+    $begin = ($page - 1) * $perPage;
+
+    $sql = "SELECT PRODUCTS.*, CATEGORIES.NAME AS category_name
+    FROM PRODUCTS
+    LEFT JOIN CATEGORIES ON PRODUCTS.category_id = CATEGORIES.id
+    ORDER BY ID DESC
+    LIMIT $begin, $perPage";
+
+    $stmt = $pdo->prepare($sql);
+
+    $stmt->execute();
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+    // Lấy danh sách kết quả
+    $result = $stmt->fetchAll();
+    $productList = array();
+
+    if (count($result) > 0) {
+        // Hiển thị dữ liệu của bảng
+        foreach ($result as $row) {
+            $product = array(
+                "id" => $row["id"],
+                "image" => $row["image"],
+                "name" => $row["name"],
+                "description" => $row["description"],
+                "price" => $row["price"],
+                "quantity" => $row["quantity"],
+                "category_name" => $row["category_name"]
+            );
+            array_push($productList, $product);
+        }
+    }
+
+    return $productList;
+}
+
+
+
 function get_products_by_price($price)
 {
     global $pdo;
