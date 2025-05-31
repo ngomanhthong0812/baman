@@ -44,15 +44,14 @@
                     <?php foreach ($_SESSION['cart'] as $orderItems) { ?>
                         <div class="my_cart flex justify-between py-[0.5rem] items-center">
                             <div class="flex gap-[10px]">
-                                <img src="./public/img/product/<?php echo $orderItems["productImage"] ?>.png" alt=""
+                                <img src="<?php echo $orderItems["productImage"] ?>" alt=""
                                     class="w-[80px]">
                                 <div class="card_heart-name_product flex flex-col justify-center">
                                     <span>
                                         <?php echo $orderItems['productName']; ?>
                                     </span>
                                     <div class="price" style="color: #9c9c9c;">
-                                        $
-                                        <?php echo $orderItems["productPrice"] ?>.00 /
+                                        <?php echo number_format($orderItems['productPrice'], 0, ',', '.'); ?> vnđ /
                                         <span style="color: salmon;">Instock</span>
                                     </div>
                                     <span class="text-[12px] font-bold">X
@@ -92,9 +91,9 @@
         </div>
         <div class="title">FREE SHIPPING ON ALL ORDER OVER $75</div>
         <div class="content">
-            <a href="">CART</a>
-            <a href="">SEARCH</a>
-            <a href="">HELP</a>
+            <a href="category.php">CART</a>
+            <a href="category.php">SEARCH</a>
+            <a href="category.php">HELP</a>
         </div>
     </div>
 </div>
@@ -110,146 +109,146 @@
         <div class="menu_1">
             <li><a href="index.php">HOME<i class='bx bx-chevron-down'></i></a>
                 <ul style=" box-shadow: 0px 0px 1px rgb(221, 221, 221);">
-                    <li><a href="#">Home Main</a></li>
-                    <li><a href="#">Modern</a></li>
-                    <li><a href="#">Home Centered</a></li>
-                    <li><a href="#">Left Sidebar</a></li>
-                    <li><a href="#">Full Screen Slider</a></li>
-                    <li><a href="#">Slider + Grid Banner</a></li>
-                    <li><a href="#">Mosaic Banner</a></li>
-                    <li><a href="#">Parallax</a></li>
-                    <li><a href="#">Product Landing</a></li>
-                    <li><a href="#">Campaign</a></li>
-                    <li><a href="#">Video</a></li>
-                    <li><a href="#">Personal</a></li>
-                    <li><a href="#">Split</a></li>
+                    <li><a href="category.php">Home Main</a></li>
+                    <li><a href="category.php">Modern</a></li>
+                    <li><a href="category.php">Home Centered</a></li>
+                    <li><a href="category.php">Left Sidebar</a></li>
+                    <li><a href="category.php">Full Screen Slider</a></li>
+                    <li><a href="category.php">Slider + Grid Banner</a></li>
+                    <li><a href="category.php">Mosaic Banner</a></li>
+                    <li><a href="category.php">Parallax</a></li>
+                    <li><a href="category.php">Product Landing</a></li>
+                    <li><a href="category.php">Campaign</a></li>
+                    <li><a href="category.php">Video</a></li>
+                    <li><a href="category.php">Personal</a></li>
+                    <li><a href="category.php">Split</a></li>
                 </ul>
             </li>
             <li><a href="category.php">SHOP<i class='bx bx-chevron-down'></i></a>
                 <ul style="width: 100%; display: flex; gap: 20px; padding: 1.5rem 5rem;">
                     <div style="width: 20%;">
                         <li style="font-size: 18px;">Catalog</li>
-                        <li><a href="">Style 1</a></li>
-                        <li><a href="">Style 2</a></li>
-                        <li><a href="">Style 3</a></li>
-                        <li><a href="">Load More</a></li>
-                        <li><a href="">Infinite Scroll</a></li>
-                        <li><a href="">Pagination</a></li>
+                        <li><a href="category.php">Style 1</a></li>
+                        <li><a href="category.php">Style 2</a></li>
+                        <li><a href="category.php">Style 3</a></li>
+                        <li><a href="category.php">Load More</a></li>
+                        <li><a href="category.php">Infinite Scroll</a></li>
+                        <li><a href="category.php">Pagination</a></li>
                     </div>
                     <div style="width: 20%;">
                         <li style="font-size: 18px;">Shop Layouts</li>
-                        <li><a href="">Default</a></li>
-                        <li><a href="">Left Sidebar</a></li>
-                        <li><a href="">Right Sidebar</a></li>
-                        <li><a href="">Top Sidebar</a></li>
-                        <li><a href="">Fixed Sidebar ( Left )</a></li>
-                        <li><a href="">Full Width ( no-sidebar )</a></li>
-                        <li><a href="">Masonry Grid</a></li>
-                        <li><a href="">Shop Category Page</a></li>
-                        <li><a href="">Shop Tag Page</a></li>
-                        <li><a href="">Shop Brand Page</a></li>
+                        <li><a href="category.php">Default</a></li>
+                        <li><a href="category.php">Left Sidebar</a></li>
+                        <li><a href="category.php">Right Sidebar</a></li>
+                        <li><a href="category.php">Top Sidebar</a></li>
+                        <li><a href="category.php">Fixed Sidebar ( Left )</a></li>
+                        <li><a href="category.php">Full Width ( no-sidebar )</a></li>
+                        <li><a href="category.php">Masonry Grid</a></li>
+                        <li><a href="category.php">Shop Category Page</a></li>
+                        <li><a href="category.php">Shop Tag Page</a></li>
+                        <li><a href="category.php">Shop Brand Page</a></li>
                     </div>
                     <div style="width: 20%;">
                         <li style="font-size: 18px;">Shop Columns</li>
-                        <li><a href="">List Type</a></li>
-                        <li><a href="">Column Three</a></li>
-                        <li><a href="">Column Four</a></li>
-                        <li><a href="">Column Five</a></li>
-                        <li><a href="">Column Six ( wide )</a></li>
+                        <li><a href="category.php">List Type</a></li>
+                        <li><a href="category.php">Column Three</a></li>
+                        <li><a href="category.php">Column Four</a></li>
+                        <li><a href="category.php">Column Five</a></li>
+                        <li><a href="category.php">Column Six ( wide )</a></li>
                     </div>
                     <div style="width: 20%;">
                         <li style="font-size: 18px;">Hero Types</li>
-                        <li><a href="">Category List</a></li>
-                        <li><a href="">Category Slider</a></li>
-                        <li><a href="">Hero Small</a></li>
-                        <li><a href="">Hero Breadcrumbs</a></li>
-                        <li><a href="">Shop No Title</a></li>
+                        <li><a href="category.php">Category List</a></li>
+                        <li><a href="category.php">Category Slider</a></li>
+                        <li><a href="category.php">Hero Small</a></li>
+                        <li><a href="category.php">Hero Breadcrumbs</a></li>
+                        <li><a href="category.php">Shop No Title</a></li>
                     </div>
                     <div style="width: 20%;">
                         <li style="font-size: 18px;">Shop Pages</li>
-                        <li><a href="">Catalog</a></li>
-                        <li><a href="">Cart</a></li>
-                        <li><a href="">Checkout</a></li>
-                        <li><a href="">Checkout ( Multisteps )</a></li>
-                        <li><a href="">My Account ( 2 Column )</a></li>
-                        <li><a href="">My account ( Tabbed )</a></li>
-                        <li><a href="">Order Tracking</a></li>
+                        <li><a href="category.php">Catalog</a></li>
+                        <li><a href="category.php">Cart</a></li>
+                        <li><a href="category.php">Checkout</a></li>
+                        <li><a href="category.php">Checkout ( Multisteps )</a></li>
+                        <li><a href="category.php">My Account ( 2 Column )</a></li>
+                        <li><a href="category.php">My account ( Tabbed )</a></li>
+                        <li><a href="category.php">Order Tracking</a></li>
                     </div>
                 </ul>
             </li>
-            <li><a href="#">PRODUCT<i class='bx bx-chevron-down'></i></a>
+            <li><a href="category.php">PRODUCT<i class='bx bx-chevron-down'></i></a>
                 <ul style="width: 100%; display: flex; gap: 20px; padding: 1.5rem 5rem;">
                     <div style="width: 25%;">
                         <li style="font-size: 18px;">Product Types</li>
-                        <li><a href="">Simple</a></li>
-                        <li><a href="">Color Variable</a></li>
-                        <li><a href="">Image Variable</a></li>
-                        <li><a href="">Grouped</a></li>
-                        <li><a href="">Extenal</a></li>
-                        <li><a href="">Out Of Stock</a></li>
-                        <li><a href="">Countdown</a></li>
-                        <li><a href="">Popup Video</a></li>
-                        <li><a href="">360deg Product</a></li>
+                        <li><a href="category.php">Simple</a></li>
+                        <li><a href="category.php">Color Variable</a></li>
+                        <li><a href="category.php">Image Variable</a></li>
+                        <li><a href="category.php">Grouped</a></li>
+                        <li><a href="category.php">Extenal</a></li>
+                        <li><a href="category.php">Out Of Stock</a></li>
+                        <li><a href="category.php">Countdown</a></li>
+                        <li><a href="category.php">Popup Video</a></li>
+                        <li><a href="category.php">360deg Product</a></li>
                     </div>
                     <div style="width: 25%;">
                         <li style="font-size: 18px;">Showcase Style</li>
-                        <li><a href="">Carousel</a></li>
-                        <li><a href="">Carousel Big</a></li>
-                        <li><a href="">Carousel Small</a></li>
-                        <li><a href="">Carousel Mini</a></li>
-                        <li><a href="">Carousel Coverflow</a></li>
-                        <li><a href="">Video Slider</a></li>
-                        <li><a href="">Stretch</a></li>
+                        <li><a href="category.php">Carousel</a></li>
+                        <li><a href="category.php">Carousel Big</a></li>
+                        <li><a href="category.php">Carousel Small</a></li>
+                        <li><a href="category.php">Carousel Mini</a></li>
+                        <li><a href="category.php">Carousel Coverflow</a></li>
+                        <li><a href="category.php">Video Slider</a></li>
+                        <li><a href="category.php">Stretch</a></li>
                     </div>
                     <div style="width: 25%;">
                         <li style="font-size: 18px;">Gallery Styles</li>
-                        <li><a href="">Thumbs Left</a></li>
-                        <li><a href="">Thumbs Right</a></li>
-                        <li><a href="">Thumbs Bottom</a></li>
-                        <li><a href="">Thumbs Top</a></li>
-                        <li><a href="">Grid</a></li>
-                        <li><a href="">Column 2</a></li>
-                        <li><a href="">Column 3</a></li>
-                        <li><a href="">Video Grid - Auto Start</a></li>
-                        <li><a href="">Video Popup</a></li>
+                        <li><a href="category.php">Thumbs Left</a></li>
+                        <li><a href="category.php">Thumbs Right</a></li>
+                        <li><a href="category.php">Thumbs Bottom</a></li>
+                        <li><a href="category.php">Thumbs Top</a></li>
+                        <li><a href="category.php">Grid</a></li>
+                        <li><a href="category.php">Column 2</a></li>
+                        <li><a href="category.php">Column 3</a></li>
+                        <li><a href="category.php">Video Grid - Auto Start</a></li>
+                        <li><a href="category.php">Video Popup</a></li>
                     </div>
                     <div style="width: 25%;">
                         <li style="font-size: 18px;">Page Layout</li>
-                        <li><a href="">Left Sidebar</a></li>
-                        <li><a href="">Right Sidebar</a></li>
-                        <li><a href="">Fullwidth</a></li>
-                        <li><a href="">Tabs</a></li>
-                        <li><a href="">Accordion</a></li>
-                        <li><a href="">Accordion 2</a></li>
-                        <li><a href="">Advenced Review & Q&A</a></li>
+                        <li><a href="category.php">Left Sidebar</a></li>
+                        <li><a href="category.php">Right Sidebar</a></li>
+                        <li><a href="category.php">Fullwidth</a></li>
+                        <li><a href="category.php">Tabs</a></li>
+                        <li><a href="category.php">Accordion</a></li>
+                        <li><a href="category.php">Accordion 2</a></li>
+                        <li><a href="category.php">Advenced Review & Q&A</a></li>
                     </div>
                 </ul>
             </li>
-            <li><a href="#">TEMPLATER<i class='bx bx-chevron-down'></i></a>
+            <li><a href="category.php">TEMPLATER<i class='bx bx-chevron-down'></i></a>
                 <ul>
-                    <li><a href="#">Header Slidebar</a></li>
-                    <li><a href="#">Header Sidebar Right</a></li>
-                    <li><a href="#">Header Sidebar Dark</a></li>
-                    <li><a href="#">Light Styles</a></li>
-                    <li><a href="#">Dark Styles</a></li>
-                    <li><a href="#">Transparent Styles</a></li>
-                    <li><a href="#">Topbars / Footers</a></li>
+                    <li><a href="category.php">Header Slidebar</a></li>
+                    <li><a href="category.php">Header Sidebar Right</a></li>
+                    <li><a href="category.php">Header Sidebar Dark</a></li>
+                    <li><a href="category.php">Light Styles</a></li>
+                    <li><a href="category.php">Dark Styles</a></li>
+                    <li><a href="category.php">Transparent Styles</a></li>
+                    <li><a href="category.php">Topbars / Footers</a></li>
                 </ul>
             </li>
-            <li><a href="#">PAGES<i class='bx bx-chevron-down'></i></a>
+            <li><a href="category.php">PAGES<i class='bx bx-chevron-down'></i></a>
                 <ul>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">About Me</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Maintenance</a></li>
-                    <li><a href="#">Coming Soon</a></li>
-                    <li><a href="#">404</a></li>
+                    <li><a href="category.php">Blog</a></li>
+                    <li><a href="category.php">Careers</a></li>
+                    <li><a href="category.php">FAQ</a></li>
+                    <li><a href="category.php">About Me</a></li>
+                    <li><a href="category.php">About Us</a></li>
+                    <li><a href="category.php">Contact</a></li>
+                    <li><a href="category.php">Maintenance</a></li>
+                    <li><a href="category.php">Coming Soon</a></li>
+                    <li><a href="category.php">404</a></li>
                 </ul>
             </li>
-            <li><a href="#">MEGA<i class='bx bx-chevron-down'></i></a></li>
+            <li><a href="category.php">MEGA<i class='bx bx-chevron-down'></i></a></li>
         </div>
         <div class="name_shop" style="position: absolute; left: 50%; transform: translateX(-50%);"><a
                 href="index.php">BAMAN</a></div>
@@ -271,7 +270,7 @@
                             <li class="p-0 mt-[5px] flex justify-center">
                                 <?php echo $_SESSION['email'] ?>
                             </li>
-                            <a href="#">
+                            <a href="category.php">
                                 <li class="p-0 mt-[5px] flex items-center gap-[5px]"><i class='bx bx-user'></i>Account</li>
                             </a>
                             <a href="logout.php">
@@ -291,7 +290,7 @@
                                 <li class="p-0 mt-[5px] flex justify-center">
                                     <?php echo $_SESSION['email'] ?>
                                 </li>
-                                <a href="#">
+                                <a href="category.php">
                                     <li class="p-0 mt-[5px] flex items-center gap-[5px]"><i class='bx bx-user'></i>Account</li>
                                 </a>
                                 <a href="admin/statistics/index.php">

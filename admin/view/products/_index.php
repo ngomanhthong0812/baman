@@ -36,7 +36,6 @@
                                 <thead>
                                     <tr>
                                         <th>STT</th>
-                                        <th>ID</th>
                                         <th>Image</th>
                                         <th>Name</th>
                                         <th>Description</th>
@@ -50,7 +49,6 @@
                                 <tfoot>
                                     <tr>
                                         <th>STT</th>
-                                        <th>ID</th>
                                         <th>Image</th>
                                         <th>Name</th>
                                         <th>Description</th>
@@ -67,10 +65,7 @@
                                             <td>
                                                 <?php echo ++$index; ?>
                                             </td>
-                                            <td>
-                                                <?php echo $product['id']; ?>
-                                            </td>
-                                            <td><img src="../../public/img/product/<?php echo $product['image']; ?>.png"
+                                            <td><img src="<?php echo $product['image']; ?>"
                                                     width="60" height="60"></td>
                                             <td>
                                                 <?php echo $product['name']; ?>

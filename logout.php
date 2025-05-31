@@ -9,5 +9,5 @@ unset($_SESSION['is_user']);
 unset($_SESSION['from']);
 unset($_SESSION['arrive']);
 unset($_SESSION['orderStatistical']);
+unset($_SESSION['user_id']);
 header('location: login.php');
-

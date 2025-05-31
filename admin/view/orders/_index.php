@@ -42,6 +42,7 @@
                                         <th>User</th>
                                         <th>Address</th>
                                         <th>Phone</th>
+                                        <th>Payment status</th>
                                         <th>Date</th>
                                         <th></th>
                                         <th></th>
@@ -56,6 +57,7 @@
                                         <th>User</th>
                                         <th>Address</th>
                                         <th>Phone</th>
+                                        <th>Payment status</th>
                                         <th>Date</th>
                                         <th></th>
                                         <th></th>
@@ -85,6 +87,9 @@
                                             </td>
                                             <td>
                                                 <?php echo $order['phone']; ?>
+                                            </td>
+                                            <td>
+                                                <?php echo $order['payment_status']; ?>
                                             </td>
                                             <td>
                                                 <?php echo $order['date']; ?>

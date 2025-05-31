@@ -39,28 +39,41 @@
                                     <input type="text" name="code" value="<?php echo $order['code']; ?>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Status</label>
-                                    <input type="text" name="status" value="<?php echo $order['status']; ?>"  class="form-control" id="exampleInputPassword1" placeholder="">
+                                    <label for="status">Status</label>
+                                    <select name="status" class="form-control" id="status">
+                                        <option value="pending" <?php echo ($order['status'] === 'pending') ? 'selected' : ''; ?>>Chờ xử lý</option>
+                                        <option value="processing" <?php echo ($order['status'] === 'processing') ? 'selected' : ''; ?>>Đang xử lý</option>
+                                        <option value="completed" <?php echo ($order['status'] === 'completed') ? 'selected' : ''; ?>>Đã hoàn tất</option>
+                                        <option value="cancelled" <?php echo ($order['status'] === 'cancelled') ? 'selected' : ''; ?>>Đã hủy</option>
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Users</label>
                                     <select class="form-control" name="users_id">
                                         <?php foreach ($userName as $user) { ?>
-                                            <option <?php if($user['id'] == $order['id']){echo 'selected'; } ?> value="<?php echo $user['name'] ?>"><?php echo $user['name'] ?></option>
+                                            <option <?php if ($user['id'] == $order['id']) {
+                                                        echo 'selected';
+                                                    } ?> value="<?php echo $user['name'] ?>"><?php echo $user['name'] ?></option>
                                         <?php } ?>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Address</label>
-                                    <input type="text" name="address" value="<?php echo $order['address']; ?>"  class="form-control" id="exampleInputPassword1" placeholder="">
+                                    <input type="text" name="address" value="<?php echo $order['address']; ?>" class="form-control" id="exampleInputPassword1" placeholder="">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Phone</label>
-                                    <input type="text" name="phone" value="<?php echo $order['phone']; ?>"  class="form-control" id="exampleInputPassword1" placeholder="">
+                                    <input type="text" name="phone" value="<?php echo $order['phone']; ?>" class="form-control" id="exampleInputPassword1" placeholder="">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Date</label>
-                                    <input type="text" name="date" value="<?php echo $order['date']; ?>"  class="form-control" id="exampleInputPassword1" placeholder="">
+                                    <label for="payment_status">Payment Status</label>
+                                    <select name="payment_status" class="form-control" id="payment_status">
+                                        <option value="unpaid" <?php echo ($order['payment_status'] === 'unpaid') ? 'selected' : ''; ?>>Unpaid</option>
+                                        <option value="pending" <?php echo ($order['payment_status'] === 'pending') ? 'selected' : ''; ?>>Pending</option>
+                                        <option value="paid" <?php echo ($order['payment_status'] === 'paid') ? 'selected' : ''; ?>>Paid</option>
+                                        <option value="refunded" <?php echo ($order['payment_status'] === 'refunded') ? 'selected' : ''; ?>>Refunded</option>
+                                        <option value="failed" <?php echo ($order['payment_status'] === 'failed') ? 'selected' : ''; ?>>Failed</option>
+                                    </select>
                                 </div>
                                 <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Submit</button>
                             </form>

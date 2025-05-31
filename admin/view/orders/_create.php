@@ -39,8 +39,13 @@
                                     <input type="text" name="code" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Status</label>
-                                    <input type="text" name="status" class="form-control" id="exampleInputPassword1" placeholder="">
+                                    <label for="status">Status</label>
+                                    <select name="status" class="form-control" id="status">
+                                        <option value="pending">Chờ xử lý</option>
+                                        <option value="processing">Đang xử lý</option>
+                                        <option value="completed">Đã hoàn tất</option>
+                                        <option value="cancelled">Đã hủy</option>
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Users</label>
@@ -59,8 +64,14 @@
                                     <input type="text" name="phone" class="form-control" id="exampleInputPassword1" placeholder="">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">date</label>
-                                    <input type="text" name="date" class="form-control" id="exampleInputPassword1" placeholder="">
+                                    <label for="payment_status">Payment Status</label>
+                                    <select name="payment_status" class="form-control" id="payment_status">
+                                        <option value="unpaid">Unpaid</option>
+                                        <option value="pending">Pending</option>
+                                        <option value="paid">Paid</option>
+                                        <option value="refunded">Refunded</option>
+                                        <option value="failed">Payment Failed</option>
+                                    </select>
                                 </div>
                                 <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Submit</button>
                             </form>

@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $informationError['firstname'] = $_POST['firstname'];
         $informationError['email'] = $_POST['email'];
         if ($_POST['phone'] != "" && $_POST['address'] != "") {
-            $pattern = '/^0[0-9]{9}$/';
+            $pattern = '/^(03|05|07|08|09)[0-9]{8}$/';
             $checkPhone = preg_match($pattern, $_POST['phone']);
             if (!empty($checkPhone)) {
                 $email = $_SESSION['email'];
@@ -26,14 +26,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $id = $user['id'];
                     $orders = array(
                         'code' => $code,
-                        'status' => 'đã đặt hàng',
+                        'status' => 'processing',
                         'users_id' => $id,
                         'address' => $_POST['address'],
                         'phone' => $_POST['phone'],
-                        'date' => date('Y-m-d'),
+                        'payment_status' => 'unpaid'
                     );
                     $_SESSION['code'] = $code;
                     $_SESSION['date'] = date('Y-m-d');
+                    $_SESSION['payment_method'] = $_POST['payment_method'];
                     $order_id = insert_order($orders);
 
                     $cart = $_SESSION['cart'];

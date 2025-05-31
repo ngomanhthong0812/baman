@@ -481,19 +481,29 @@ try {
     var txtShippingTotal = document.querySelector(".shippingTotal");
     var txtTotal = document.querySelector(".total");
     var productTotal = 0;
-    for (i = 0; i < total.length; i++) {
-      var number = parseInt(total[i].innerHTML);
+
+    for (var i = 0; i < total.length; i++) {
+      var rawText = total[i].innerHTML;
+      var cleaned = rawText.replace(/[^\d]/g, ''); // chỉ giữ lại số
+      var number = parseInt(cleaned);
       productTotal += number;
     }
-    txtSubtotal.innerHTML = productTotal;
+
     var shipping = parseInt(productTotal * 0.1);
-    txtShippingTotal.innerHTML = shipping;
-    txtTotal.innerHTML = productTotal + shipping;
+
+    console.log(productTotal);
+    
+
+    txtSubtotal.innerHTML = productTotal.toLocaleString('vi-VN');
+    txtShippingTotal.innerHTML = shipping.toLocaleString('vi-VN');
+    txtTotal.innerHTML = (productTotal + shipping).toLocaleString('vi-VN');
   }
+
   productToltal();
 } catch (error) {
-
+  console.error(error);
 }
+
 
 function isLoad() {
   if (indexProductLength < 8) {
@@ -563,21 +573,24 @@ var minPriceDataInput = document.getElementById('minPriceData');
 var maxPriceDataInput = document.getElementById('maxPriceData');
 
 noUiSlider.create(slider, {
-  start: [20, 300],
+  start: [2000000, 30000000],
   connect: true,
   range: {
-    'min': 10,
-    'max': 400
+    'min': 1000000,
+    'max': 40000000
   }
 });
 
 slider.noUiSlider.on('update', function (values, handle) {
-  var min = values[0];
-  var max = values[1];
+  var min = parseInt(values[0]);
+  var max = parseInt(values[1]);
+
+  console.log(min);
+  
 
   // Hiển thị giá trị min và max lấy từ thanh trượt
-  minPriceInput.innerHTML = min;
-  maxPriceInput.innerHTML = max;
+  minPriceInput.innerHTML = formatVND(min);
+  maxPriceInput.innerHTML = formatVND(max);
   minPriceDataInput.value = min;
   maxPriceDataInput.value = max;
 });
@@ -585,3 +598,7 @@ slider.noUiSlider.on('update', function (values, handle) {
 document.getElementById('sortBy').addEventListener('change', function() {
   document.getElementById('sortByForm').submit();
 });
+
+function formatVND(number) {
+  return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(number);
+}

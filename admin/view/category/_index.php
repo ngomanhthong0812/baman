@@ -35,7 +35,6 @@
                                     <tr>
                                         <th>STT</th>
                                         <th>ID</th>
-                                        <th>Img</th>
                                         <th>Name</th>
                                         <th>Description</th>
                                         <th></th>
@@ -46,7 +45,6 @@
                                     <tr>
                                         <th>STT</th>
                                         <th>ID</th>
-                                        <th>Img</th>
                                         <th>Name</th>
                                         <th>Description</th>
                                         <th></th>
@@ -63,8 +61,6 @@
                                             <td>
                                                 <?php echo $category['id']; ?>
                                             </td>
-                                            <td><img src="../../public/img/product/<?php echo $category['image']; ?>.png"
-                                                    width="60" height="60"></td>
                                             <td>
                                                 <?php echo $category['name']; ?>
                                             </td>

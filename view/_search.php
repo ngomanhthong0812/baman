@@ -19,7 +19,6 @@
 <body>
     <?php include './view/inc/_header.php' ?>
     <div class="relative w-[100%] h-[128px] bg-[#f5f5f5] container_categories">
-        <img src="./public/img/banner/1920-1.png" alt="" class="h-[100%] w-[100%] object-cover">
         <div
             class="w-[100%] h-[100%] max-w-[1540px] px-[1rem] flex flex-col justify-center absolute top-0 left-[50%] translate-x-[-50%]">
             <ul class="flex gap-[5px] text-[12px] text-gray-300 leading-8">
@@ -38,31 +37,6 @@
     <div class="my_body py-[3rem]">
         <div class="max-w-[1540px] m-auto flex">
             <div class="w-[25%] pr-[2.3rem]">
-                <div>
-                    <span class="flex justify-between items-center text-[15px] font-[500]">
-                        <p>Filter By</p><button
-                            class="w-[20px] h-[20px] rounded-full bg-[#f5f5f5] text-[16px] flex items-center justify-center font-bold">-</button>
-                    </span>
-                    <span class="flex justify-between items-center text-[12px] font-[400] mt-[1rem]">
-                        <p class="text-[#7d7d7d] cursor-pointer">Pattern #1</p><button
-                            class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center">2</button>
-                    </span>
-                    <span class="flex justify-between items-center text-[12px] font-[400]">
-                        <p class="text-[#7d7d7d] cursor-pointer">Pattern #2</p><button
-                            class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center">2</button>
-                    </span>
-                </div>
-                <div class="mt-[2rem]">
-                    <span class="flex justify-between items-center text-[15px] font-[500]">
-                        <p>Filter By Price</p><button
-                            class="w-[20px] h-[20px] rounded-full bg-[#f5f5f5] text-[16px] flex items-center justify-center font-bold">-</button>
-                    </span>
-                    <input type="range" class="w-[100%] mt-[1rem]">
-                    <span
-                        class="flex justify-between items-center text-[12px] mt-[1rem] text-[#7d7d7d] font-[420]"><button
-                            class="bg-black text-white py-[0.4rem] px-3">FILTER</button><span>PRICE: $10 -
-                            $240</span></span>
-                </div>
                 <div class="mt-[2rem]">
                     <span class="flex justify-between items-center text-[15px] font-[500]">
                         <p>Filter By</p><button
@@ -138,21 +112,6 @@
                 </div>
             </div>
             <div class="w-[75%] pl-[1rem]">
-                <div
-                    class="w-[100%] h-[300px] relative bg-[#f5f5f5] cursor-pointer group truncate border rounded-[7px]">
-                    <img src="./public/img/banner/1920-3.png" alt=""
-                        class="h-[100%] w-[100%] object-cover object-top rounded-[7px] group-hover:scale-[120%] duration-200 ease-in-out">
-                    <div
-                        class="absolute w-[100%] h-[100%] top-0 text-[13px] font-[550] flex flex-col justify-center px-[1.5rem]">
-                        <div
-                            class="bg-[#dddddd] w-[120px] text-[11px] p-[0.3rem] flex justify-center leading-4 tracking-[2px]">
-                            NOSE RINGS</div>
-                        <p class="leading-10">Free Shipping On Over $50</p>
-                        <p class="font-[400] text-[#7d7d7d]">For the terms of the campain, see the description page</p>
-                        <button class="bg-black w-[180px] text-white p-3 font-[450] leading-3 mt-[80px]">See More
-                            Products</button>
-                    </div>
-                </div>
                 <nav class="py-[2.5rem]">
                     <ul class="flex text-[12px] font-[500] gap-[15px]">
                         <li class="flex items-center text-[14px] text-[#7d7d7d]">Fast Filters:</li>
@@ -269,7 +228,7 @@
                                     type="<?php echo $product['category_name'] ?>"
                                     class="my_card w-[100%] flex gap-[20px] border p-[1.2rem] rounded-[10px] shadow-sm">
                                     <div class="image w-[300px] border rounded-[5px]">
-                                        <img src="./public/img/product/<?php echo $product['image']; ?>.png" alt=""
+                                        <img src="<?php echo $product['image']; ?>" alt=""
                                             class="w-[100px]">
                                         <div class="icon"> <i class='bx bx-heart'></i><i class='bx bxs-right-arrow'></i></div>
                                         <div class="icon"><i class='bx bx-refresh'></i><i class='bx bxs-right-arrow'></i></div>
@@ -321,7 +280,7 @@
                                 <a href="detail.php?product_id=<?php echo $product['id']; ?>"
                                     type="<?php echo $product['category_name'] ?>" class="my_card">
                                     <div class="image">
-                                        <img src="./public/img/product/<?php echo $product['image']; ?>.png" alt="">
+                                        <img src="<?php echo $product['image']; ?>" alt="">
                                         <div class="icon"> <i class='bx bx-heart'></i><i class='bx bxs-right-arrow'></i></div>
                                         <div class="icon"><i class='bx bx-refresh'></i><i class='bx bxs-right-arrow'></i></div>
                                         <div class="icon"
@@ -345,15 +304,8 @@
                 </div>
                 <!-- end lọc 2,3,4 -->
 
-
-                <div class="w-[100%] flex justify-center p-[2rem] container_load_more container_load_more-1"><button
-                        class="load_more bg-black text-white px-[2.5rem] py-[0.5rem] text-[13px] hover:opacity-[0.7] duration-200 ease-in-out"
-                        onclick="load_more()">Load More</button></div>
-
-
             </div>
         </div>
-        <?php include './view/inc/_zoom-card.php' ?>
     </div>
 
 
@@ -365,7 +317,7 @@
         var productFilter2 = document.querySelectorAll(".filter-2 .my_card")
         var spinner = document.querySelector(".container_filter-1 .spinner_1");
         var containerLoadMore = document.querySelector(".container_load_more");
-        window.addEventListener('load', function () {
+        window.addEventListener('load', function() {
             // Trang web đã tải hoàn toàn
             var val_1 = document.querySelector(".val-1 svg")
             val_1.style.color = "black"
@@ -379,7 +331,7 @@
         var menu = document.querySelector(".container_menu");
         var myBody = document.querySelector(".container_categories");
 
-        window.addEventListener("scroll", function () {
+        window.addEventListener("scroll", function() {
             // Kiểm tra vị trí cuộn
             var scrollPosition = window.scrollY || document.documentElement.scrollTop;
 

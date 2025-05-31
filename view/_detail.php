@@ -25,31 +25,18 @@
         <?php foreach ($productList as $product) { ?>
             <?php if ($product['id'] == $_GET["product_id"]) { ?>
                 <div class="product_details max-w-[1540px] flex m-auto pt-[1rem] gap-[20px]">
-                    <div class="w-[50%] flex gap-[10px] bg-white p-0">
-                        <div class="image_child">
-                            <img src="./public/img/product/<?php echo $product['image'] ?>.png" alt="" class="w-[300px] cursor-pointer" onclick="btnChild(0)">
-                            <img src="./public/img/product/<?php echo $product['image'] ?>-1.png" alt="" class="w-[300px] cursor-pointer mt-[10px]" onclick="btnChild(1)">
-                            <img src="./public/img/product/<?php echo $product['image'] ?>-2.png" alt="" class="w-[300px] cursor-pointer mt-[10px]" onclick="btnChild(2)">
-                            <img src="./public/img/product/<?php echo $product['image'] ?>-3.png" alt="" class="w-[300px] cursor-pointer mt-[10px]" onclick="btnChild(3)">
-                            <img src="./public/img/product/<?php echo $product['image'] ?>-4.png" alt="" class="w-[300px] cursor-pointer mt-[10px]" onclick="btnChild(4)">
-                        </div>
-                        <div class="image truncate relative">
-                            <div class="my_prev absolute left-[10px] top-[50%] text-[30px] cursor-pointer p-2 flex items-center justify-center rounded-full bg-white z-10">
-                                <i class='bx bx-chevron-left'></i>
-                            </div>
+                    <div class="w-[40%] flex gap-[10px] bg-white p-0">
+                        <div class="image truncate relative w-full">
                             <div class="image-1 flex" style=" transition: transform 0.5s ease-in-out">
-                                <img src="./public/img/product/<?php echo $product['image'] ?>.png" alt="" class="w-[100%] h-[600px] cursor-grab" style="flex: 0 0 auto;">
-                                <img src="./public/img/product/<?php echo $product['image'] ?>-1.png" class="w-[100%] h-[600px] cursor-grab" style="flex: 0 0 auto;">
-                                <img src="./public/img/product/<?php echo $product['image'] ?>-2.png" alt="" class="w-[100%] h-[600px] cursor-grab" style="flex: 0 0 auto;">
-                                <img src="./public/img/product/<?php echo $product['image'] ?>-3.png" alt="" class="w-[100%] h-[600px] cursor-grab" style="flex: 0 0 auto;">
-                                <img src="./public/img/product/<?php echo $product['image'] ?>-4.png" alt="" class="w-[100%] h-[600px] cursor-grab" style="flex: 0 0 auto;">
-                            </div>
-                            <div class="my_next absolute right-[10px] top-[50%] text-[30px] cursor-pointer p-2 flex items-center justify-center rounded-full bg-white z-10">
-                                <i class='bx bx-chevron-right'></i>
+                                <img src="<?php echo $product['image'] ?>" alt="" class="w-[100%] object-cover cursor-grab" style="flex: 0 0 auto;">
+                                <img src="<?php echo $product['image'] ?>" class="w-[100%] object-cover cursor-grab" style="flex: 0 0 auto;">
+                                <img src="<?php echo $product['image'] ?>" alt="" class="w-[100%] object-cover cursor-grab" style="flex: 0 0 auto;">
+                                <img src="<?php echo $product['image'] ?>" alt="" class="w-[100%] object-cover cursor-grab" style="flex: 0 0 auto;">
+                                <img src="<?php echo $product['image'] ?>" alt="" class="w-[100%] object-cover cursor-grab" style="flex: 0 0 auto;">
                             </div>
                         </div>
                     </div>
-                    <div class="details w-[50%]">
+                    <div class="details w-[60%]">
                         <div class="menu flex gap-[5px] text-[12px] text-black">
                             <a href="#">HOME</a>
                             <li class="p-0 text-gray-300">/</li>
@@ -71,8 +58,8 @@
                                 Hurry to take advantage of the offer</div>
                             <div class="w-[10%]">Expired</div>
                         </div>
-                        <div class="price text-18px italic font-[500]">$
-                            <?php echo $product['price'] ?>.00
+                        <div class="price">
+                            <?php echo number_format($product['price'], 0, ',', '.'); ?> vnđ
                         </div>
                         <?php if ($product['quantity'] == 0) { ?>
                             <span class="status m-0 rounded-[10px] max-w-full inline-block">OUT OF STOCK</span>
@@ -199,35 +186,17 @@
                 <div class="cursor-pointer"> REVIEWS (0)</div>
                 <div class="cursor-pointer"> Q & A</div>
             </div>
-            <div class="text-[14px] text-gray-500 font-[400] leading-6 mt-[15px]">Our favorite jean meets our favorite
-                decade. Made from premium non-stretch Japanese denim for a vintage-inspired look, the ’90s Cheeky Jean
-                has an easy straight leg, an extra-high rise, and a butt-boosting rear fit. Pellentesque habitant morbi
-                tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
-                ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi
-                vitae est. Mauris placerat eleifend leo.</div>
-            <div class="mt-[10px] text-[20px] font-[600]">Features</div>
-            <div class="mt-[10px]">
-                <div class="flex items-center text-[14px] text-gray-500 font-[400] gap-[5px]"><span class="text-[23px]">&#8226;</span>Lexie is 5’8”, size 0, wearing a 23 Ankle</div>
-                <div class="flex items-center text-[14px] text-gray-500 font-[400] gap-[5px]"><span class="text-[23px]">&#8226;</span>Straight fit. Cropped at the ankle. Sits at high waist. Rise:
-                    11”. Inseam: 26.5”. Leg opening: 14” (size 28).</div>
-                <div class="flex items-center text-[14px] text-gray-500 font-[400] gap-[5px]"><span class="text-[23px]">&#8226;</span>Rigid: 100% cottonMachine wash cold. Tumble dry low.</div>
-                <div class="flex items-center text-[14px] text-gray-500 font-[400] gap-[5px]"><span class="text-[23px]">&#8226;</span>Button fly</div>
-                <div class="flex items-center text-[14px] text-gray-500 font-[400] gap-[5px]"><span class="text-[23px]">&#8226;</span>Made in NineTheme</div>
-                <div class="flex items-center text-[14px] text-gray-500 font-[400] gap-[5px]"><span class="text-[23px]">&#8226;</span>Safer For The Environment: Our denim factory partner recycles
-                    98% of their water using reverse osmosis filtration and keeps byproducts out of the environment by
-                    mixing them with concrete to create building materials.</div>
-                <div class="flex items-center text-[14px] text-gray-500 font-[400] gap-[5px]"><span class="text-[23px]">&#8226;</span>Questions about fit?</div>
-            </div>
+            updating...
         </div>
         <div class="max-w-[1540px] m-auto truncate">
-            <div class="title text-[20px] font-[600] flex justify-between">You May Also Like <div class="text-[30px] text-gray-400"><i class='bx bx-chevron-left cursor-pointer'></i><i class='bx bx-chevron-right cursor-pointer'></i></div>
+            <div class="title text-[20px] font-[600] flex justify-between">You May Also Like <div class="text-[30px] text-gray-400"></div>
             </div>
             <div class="product_card flex py-[1.5rem]" style="grid-gap: 20px;">
-                <?php for ($i = 7; $i < 13; $i++) { ?>
-                    <?php if ($i + 1 != $_GET["product_id"]) { ?>
+                <?php for ($i = 0; $i <  min(5, count($productList)); $i++) { ?>
+                    <?php if ($productList[$i]['id'] != $_GET["product_id"]) { ?>
                         <a href="detail.php?product_id=<?php echo $productList[$i]['id']; ?>" class="my_card w-[30%]" style="flex: 0 0 auto;">
                             <div class="image">
-                                <img src="./public/img/product/<?php echo $productList[$i]['id']; ?>.png" alt="">
+                                <img src="<?php echo $productList[$i]['image']; ?>" alt="">
                                 <div class="icon"> <i class='bx bx-heart'></i><i class='bx bxs-right-arrow'></i></div>
                                 <div class="icon"><i class='bx bx-refresh'></i><i class='bx bxs-right-arrow'></i></div>
                                 <div class="icon" onclick="openZoomCard('<?php echo $productList[$i]['id']; ?>','<?php echo $productList[$i]['image']; ?>', '<?php echo $productList[$i]['name']; ?>', '<?php echo $productList[$i]['price']; ?>','<?php echo $productList[$i]['description']; ?>', event)">
@@ -239,48 +208,15 @@
                             <p>
                                 <?php echo $productList[$i]['name']; ?>
                             </p>
-                            <div class="price">$
-                                <?php echo $productList[$i]['price']; ?>.00
+                            <div class="price">
+                                <?php echo number_format($productList[$i]['price'], 0, ',', '.'); ?> vnđ
                             </div>
                         </a>
                     <?php } ?>
                 <?php } ?>
             </div>
         </div>
-        <div class="max-w-[1540px] m-auto truncate py-[1rem]">
-            <div class="title text-[20px] font-[600] flex justify-between">Viewers Also Liked<div class="text-[30px] text-gray-400"><i class='bx bx-chevron-left cursor-pointer'></i><i class='bx bx-chevron-right cursor-pointer'></i></div>
-            </div>
-            <div class="product_card flex py-[1.5rem]" style="grid-gap: 20px;">
-                <?php for ($i = 0; $i < 7; $i++) { ?>
-                    <?php if ($i + 1 != $_GET["product_id"]) { ?>
-                        <a href="detail.php?product_id=<?php echo $productList[$i]['id']; ?>" class="my_card w-[30%]" style="flex: 0 0 auto;">
-                            <div class="image">
-                                <img src="./public/img/product/<?php echo $productList[$i]['id']; ?>.png" alt="">
-                                <div class="icon"> <i class='bx bx-heart'></i><i class='bx bxs-right-arrow'></i></div>
-                                <div class="icon"><i class='bx bx-refresh'></i><i class='bx bxs-right-arrow'></i></div>
-                                <div class="icon" onclick="openZoomCard('<?php echo $productList[$i]['id']; ?>','<?php echo $productList[$i]['image']; ?>', '<?php echo $productList[$i]['name']; ?>', '<?php echo $productList[$i]['price']; ?>','<?php echo $productList[$i]['description']; ?>', event)">
-                                    <i class='bx bx-fullscreen'></i><i class='bx bxs-right-arrow'></i>
-                                </div>
-                                <button>Read more</button>
-                            </div>
-                            <p>
-                                <?php echo $productList[$i]['name']; ?>
-                            </p>
-                            <div class="price">$
-                                <?php echo $productList[$i]['price']; ?>.00
-                            </div>
-                        </a>
-                    <?php } ?>
-                <?php } ?>
 
-            </div>
-        </div>
-
-
-
-        <!-- zoom card -->
-        <?php include './view/inc/_zoom-card.php' ?>
-        <!-- zoom card -->
 
     </div>
     <!-- footer -->

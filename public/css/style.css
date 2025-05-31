@@ -134,7 +134,7 @@ body {
   max-width: var(--my-width);
   margin: 0px auto;
   display: flex;
-  height: 750px;
+  height: 500px;
   justify-content: space-between;
 }
 .my_banner .slide {
@@ -1784,10 +1784,9 @@ footer {
 }
 
 @media (max-width: 1000px) {
-
   .Featured_Deals .Featured_Deals-child--1 {
     padding-right: 0;
-}
+  }
   .navbar div:nth-child(1),
   .navbar div:nth-child(3) {
     display: none;
@@ -2124,16 +2123,16 @@ footer {
   margin-top: 13px;
 }
 /* checkout */
-.addDeliveryInformation{
+.addDeliveryInformation {
   padding: 0.8rem;
   margin-top: 1rem;
   transition: background-color 0.3s ease-in-out;
 }
-.addDeliveryInformation:hover{
-    color: white;
-    background-color: black;
-  }
-.container_row{
+.addDeliveryInformation:hover {
+  color: white;
+  background-color: black;
+}
+.container_row {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -2153,7 +2152,7 @@ footer {
   margin: 0px auto;
   padding: 1rem;
 }
-.add_now{
+.add_now {
   border: none;
   padding: 0.6rem 2rem;
   color: white;
@@ -2205,14 +2204,14 @@ label {
   padding: 7px 0;
   font-size: 24px;
 }
-.icon-container svg:nth-child(1){
+.icon-container svg:nth-child(1) {
   fill: navy;
 }
-.icon-container svg:nth-child(2){
+.icon-container svg:nth-child(2) {
   fill: rgb(21, 117, 196);
 }
 
-.buy_now{
+.buy_now {
   padding: 0 1rem;
 }
 .btn {
@@ -2245,7 +2244,7 @@ span.price {
   }
 }
 
-.navbar_pay{
+.navbar_pay {
   max-width: var(--my-width);
   display: flex;
   padding: 10px;
@@ -2253,20 +2252,20 @@ span.price {
   box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.3);
   position: relative;
 }
-.logo_bamanpay img{
+.logo_bamanpay img {
   width: 40px;
   height: 40px;
   margin-top: 14px;
 }
-.logo_bamanpay{
+.logo_bamanpay {
   display: flex;
   margin-right: 8px;
   align-items: center;
 }
-.logo_bamanpay h2{
+.logo_bamanpay h2 {
   margin-top: 14px;
 }
-.pay{ 
+.pay {
   justify-content: center;
   display: flex;
   border-left: 3px solid #000000;
@@ -2275,22 +2274,22 @@ span.price {
   padding-left: 10px;
   text-transform: uppercase;
 }
-.pay h2{
+.pay h2 {
   font-size: 20px;
   color: #04aa6d;
 }
-.navbar_pay > img{
+.navbar_pay > img {
   width: 35px;
   position: absolute;
   top: 46px;
   left: -10px;
   animation: cart 20s linear infinite;
 }
-@keyframes cart{
-  0%{
+@keyframes cart {
+  0% {
     transform: translateX(0px);
   }
-  100%{
+  100% {
     transform: translateX(1500px);
   }
 }
@@ -2305,7 +2304,7 @@ span.price {
   position: absolute;
   top: 30%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   z-index: 10;
 }
 .spinner_1 > div,
@@ -2314,7 +2313,7 @@ span.price {
   height: 100%;
   width: 6px;
   display: inline-block;
-  
+
   -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
   animation: sk-stretchdelay 1.2s infinite ease-in-out;
 }
@@ -2325,8 +2324,8 @@ span.price {
 }
 .spinner_1 .rect3,
 .spinner .rect3 {
-  -webkit-animation-delay: -1.0s;
-  animation-delay: -1.0s;
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
 }
 .spinner_1 .rect4,
 .spinner .rect4 {
@@ -2340,36 +2339,43 @@ span.price {
 }
 
 @-webkit-keyframes sk-stretchdelay {
-  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
-  20% { -webkit-transform: scaleY(1.0) }
-}
-
-@keyframes sk-stretchdelay {
-  0%, 40%, 100% { 
-    transform: scaleY(0.4);
+  0%,
+  40%,
+  100% {
     -webkit-transform: scaleY(0.4);
-  }  20% { 
-    transform: scaleY(1.0);
-    -webkit-transform: scaleY(1.0);
+  }
+  20% {
+    -webkit-transform: scaleY(1);
   }
 }
 
+@keyframes sk-stretchdelay {
+  0%,
+  40%,
+  100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+  }
+}
 
 .filter-1,
-.filter-2{
+.filter-2 {
   transition: opacity 1s ease-in-out;
 }
 
 /* login */
-.form_dang_nhap{
+.form_dang_nhap {
   width: 100%;
 }
-.form_dang_nhap_2{
+.form_dang_nhap_2 {
   width: 65%;
   margin: 0px auto;
   padding: 2rem 0;
 }
-
 
 .form_dang_nhap_2 form {
   background-color: white;
@@ -2395,7 +2401,7 @@ span.price {
   margin-top: 13px;
 }
 
-.form_dang_nhap_2 a:not(.dang_ki,.social-login a) {
+.form_dang_nhap_2 a:not(.dang_ki, .social-login a) {
   color: #007bff;
   text-decoration: none;
   display: block;
@@ -2404,7 +2410,7 @@ span.price {
 .form_dang_nhap_2 a:hover {
   color: #f02757;
 }
-.form_dang_nhap_2 .dang_ki:hover{
+.form_dang_nhap_2 .dang_ki:hover {
   color: #f02757;
   text-decoration: none;
 }
@@ -2416,7 +2422,7 @@ span.price {
   align-items: center;
 }
 
-.quen_mat_khau{
+.quen_mat_khau {
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -2435,7 +2441,7 @@ span.price {
   transition: background-color 0.3s ease;
   color: rgb(0, 0, 0);
 }
-.social-login a:hover{
+.social-login a:hover {
   text-decoration: none;
   color: #007bff;
 }
@@ -2455,16 +2461,16 @@ span.price {
 .form_dang_nhap_2 input[type="submit"]:hover {
   opacity: 0.8;
 }
-.form_dang_nhap_2 div{
+.form_dang_nhap_2 div {
   display: flex;
- justify-content: center;
+  justify-content: center;
 }
 
-.container_top-cart .my_card-1{
+.container_top-cart .my_card-1 {
   transform: translateX(100px) !important;
   transition: transform 0.5s ease-in-out, opacity 0.5s;
 }
-.account_user::before{
+.account_user::before {
   position: absolute;
   content: "";
   width: 10px;
@@ -2476,7 +2482,6 @@ span.price {
   transform: rotate(45deg);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
-.account_user ul{
+.account_user ul {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
-

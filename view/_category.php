@@ -19,7 +19,6 @@
 <body>
     <?php include './view/inc/_header.php' ?>
     <div class="relative w-[100%] h-[128px] bg-[#f5f5f5] container_categories">
-        <img src="./public/img/banner/1920-1.png" alt="" class="h-[100%] w-[100%] object-cover">
         <div class="w-[100%] h-[100%] max-w-[1540px] px-[1rem] flex flex-col justify-center absolute top-0 left-[50%] translate-x-[-50%]">
             <ul class="flex gap-[5px] text-[12px] text-gray-300 leading-8">
                 <li class="text-black">HOME</li>
@@ -56,7 +55,7 @@
                         <button class="bg-black text-white py-[0.4rem] px-3">FILTER</button>
                         <input type="hidden" name="minPrice" id="minPriceData" value="">
                         <input type="hidden" name="maxPrice" id="maxPriceData" value="">
-                        <span class="flex items-center justify-center">PRICE: $<div id="minPrice"></div> - $ <div id="maxPrice"></div></span>
+                        <span class="flex items-center justify-center">PRICE:<div id="minPrice"></div> - <div id="maxPrice"></div></span>
                     </form>
 
                 </div>
@@ -68,82 +67,41 @@
                         <button type="black" class="btnType text-[#7d7d7d] flex items-center gap-[10px] cursor-pointer">
                             <div class="w-[11px] h-[11px] rounded-full bg-black border"></div>Black
                         </button>
-                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center">3</div>
+                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center"></div>
                     </span>
                     <span class="flex justify-between items-center text-[12px] font-[400] mt-[0.5rem]">
                         <button type="blue" class="btnType text-[#7d7d7d] flex items-center gap-[10px] cursor-pointer">
                             <div class="w-[11px] h-[11px] rounded-full bg-[blue] border"></div>Blue
                         </button>
-                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center">5</div>
+                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center"></div>
                     </span>
                     <span class="flex justify-between items-center text-[12px] font-[400] mt-[0.5rem]">
                         <button type="brown" class="btnType text-[#7d7d7d] flex items-center gap-[10px] cursor-pointer">
                             <div class="w-[11px] h-[11px] rounded-full bg-[brown] border"></div>Brown
                         </button>
-                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center">3</div>
+                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center"></div>
                     </span>
                     <span class="flex justify-between items-center text-[12px] font-[400] mt-[0.5rem]">
                         <button type="green" class="btnType text-[#7d7d7d] flex items-center gap-[10px] cursor-pointer">
                             <div class="w-[11px] h-[11px] rounded-full bg-[green] border"></div>Green
                         </button>
-                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center">4</div>
+                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center"></div>
                     </span>
                     <span class="flex justify-between items-center text-[12px] font-[400] mt-[0.5rem]">
                         <button type="white" class="btnType text-[#7d7d7d] flex items-center gap-[10px] cursor-pointer">
                             <div class="w-[11px] h-[11px] rounded-full bg-[#ffffff] border"></div>White
                         </button>
-                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center">0</div>
+                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center"></div>
                     </span>
                     <span class="flex justify-between items-center text-[12px] font-[400] mt-[0.5rem]">
                         <button type="yellow" class="btnType text-[#7d7d7d] flex items-center gap-[10px] cursor-pointer">
                             <div class="w-[11px] h-[11px] rounded-full bg-[yellow] border"></div>Yellow
                         </button>
-                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center">4</div>
-                    </span>
-                </div>
-                <div class="mt-[2rem]">
-                    <span class="flex justify-between items-center text-[15px] font-[500]">
-                        <p>Filter By Sizes</p>
-                        <div class="w-[20px] h-[20px] rounded-full bg-[#f5f5f5] text-[16px] flex items-center justify-center font-bold">-</div>
-                    </span>
-                    <span class="flex justify-between items-center text-[12px] font-[400] mt-[1rem]">
-                        <button class="text-[#7d7d7d] flex items-center gap-[10px] cursor-pointer">10K</button>
-                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center">4</div>
-                    </span>
-                    <span class="flex justify-between items-center text-[12px] font-[400] mt-[0.5rem]">
-                        <button class="text-[#7d7d7d] flex items-center gap-[10px] cursor-pointer">14K</button>
-                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center">7</div>
-                    </span>
-                    <span class="flex justify-between items-center text-[12px] font-[400] mt-[0.5rem]">
-                        <button class="text-[#7d7d7d] flex items-center gap-[10px] cursor-pointer">18K</button>
-                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center">5</div>
-                    </span>
-                    <span class="flex justify-between items-center text-[12px] font-[400] mt-[0.5rem]">
-                        <button class="text-[#7d7d7d] flex items-center gap-[10px] cursor-pointer">22K</button>
-                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center">7</div>
-                    </span>
-                    <span class="flex justify-between items-center text-[12px] font-[400] mt-[0.5rem]">
-                        <button class="text-[#7d7d7d] flex items-center gap-[10px] cursor-pointer">24K</button>
-                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center">8</div>
-                    </span>
-                    <span class="flex justify-between items-center text-[12px] font-[400] mt-[0.5rem]">
-                        <button class="text-[#7d7d7d] flex items-center gap-[10px] cursor-pointer">8k</button>
-                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center">3</div>
+                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center"></div>
                     </span>
                 </div>
             </div>
             <div class="w-[75%] pl-[1rem]">
-                <div class="w-[100%] h-[300px] relative bg-[#f5f5f5] cursor-pointer group truncate border rounded-[7px]">
-                    <img src="./public/img/banner/1920-3.png" alt="" class="h-[100%] w-[100%] object-cover object-top rounded-[7px] group-hover:scale-[120%] duration-200 ease-in-out">
-                    <div class="absolute w-[100%] h-[100%] top-0 text-[13px] font-[550] flex flex-col justify-center px-[1.5rem]">
-                        <div class="bg-[#dddddd] w-[120px] text-[11px] p-[0.3rem] flex justify-center leading-4 tracking-[2px]">
-                            NOSE RINGS</div>
-                        <p class="leading-10">Free Shipping On Over $50</p>
-                        <p class="font-[400] text-[#7d7d7d]">For the terms of the campain, see the description page</p>
-                        <button class="bg-black w-[180px] text-white p-3 font-[450] leading-3 mt-[80px]">See More
-                            Products</button>
-                    </div>
-                </div>
                 <nav class="py-[2.5rem]">
                     <ul class="flex text-[12px] font-[500] gap-[15px]">
                         <li class="flex items-center text-[14px] text-[#7d7d7d]">Fast Filters:</li>
@@ -219,13 +177,19 @@
                                     </path>
                                 </svg>
                             </li>
-                        <form id="sortByForm" action="category.php" method="get">
-                           <select id="sortBy" name="orderBy">
-                             <option class="text-[12px]" <?php if(isset($_GET['orderBy'] )&& $_GET['orderBy'] == 'latest' || !isset($_GET['orderBy'] ) ){echo 'selected'; } ?> value="latest">Sort by latest</option>
-                             <option class="text-[12px]" <?php if(isset($_GET['orderBy'] )&& $_GET['orderBy'] == 'ascending'){echo 'selected'; } ?> value="ascending">Price sort: ascending</option>
-                             <option class="text-[12px]" <?php if(isset($_GET['orderBy'] )&& $_GET['orderBy'] == 'descending'){echo 'selected'; } ?> value="descending">Price sort: descending</option>
-                            </select>
-                        </form>
+                            <form id="sortByForm" action="category.php" method="get">
+                                <select id="sortBy" name="orderBy">
+                                    <option class="text-[12px]" <?php if (isset($_GET['orderBy']) && $_GET['orderBy'] == 'latest' || !isset($_GET['orderBy'])) {
+                                                                    echo 'selected';
+                                                                } ?> value="latest">Sort by latest</option>
+                                    <option class="text-[12px]" <?php if (isset($_GET['orderBy']) && $_GET['orderBy'] == 'ascending') {
+                                                                    echo 'selected';
+                                                                } ?> value="ascending">Price sort: ascending</option>
+                                    <option class="text-[12px]" <?php if (isset($_GET['orderBy']) && $_GET['orderBy'] == 'descending') {
+                                                                    echo 'selected';
+                                                                } ?> value="descending">Price sort: descending</option>
+                                </select>
+                            </form>
                         </div>
 
                     </div>
@@ -237,8 +201,9 @@
                             <?php if (in_array(intval($product['price']), $productPriceFilter)) { ?>
                                 <a href="detail.php?product_id=<?php echo $product['id']; ?>" type="<?php echo $product['category_name'] ?>" class="my_card w-[100%] flex gap-[20px] border p-[1.2rem] rounded-[10px] shadow-sm">
                                     <div class="image w-[300px] h-[180px] border rounded-[5px]">
-                                        <img src="./public/img/product/<?php echo $product['image']; ?>.png" alt="" class="w-[100px]">
-                                        <div class="icon"> <i class='bx bx-heart'></i><i class='bx bxs-right-arrow'></i></div>
+                                        <img src="<?php echo $product['image']; ?>" alt="">
+                                        <div class=" icon"> <i class='bx bx-heart'></i><i class='bx bxs-right-arrow'></i>
+                                        </div>
                                         <div class="icon"><i class='bx bx-refresh'></i><i class='bx bxs-right-arrow'></i></div>
                                         <div class="icon" onclick="openZoomCard('<?php echo $product['id']; ?>','<?php echo $product['image']; ?>', '<?php echo $product['name']; ?>', '<?php echo $product['price']; ?>','<?php echo $product['description']; ?>', event)">
                                             <i class='bx bx-fullscreen'></i><i class='bx bxs-right-arrow'></i>
@@ -279,7 +244,7 @@
                             <?php if (in_array(intval($product['price']), $productPriceFilter)) { ?>
                                 <a href="detail.php?product_id=<?php echo $product['id']; ?>" type="<?php echo $product['category_name'] ?>" class="my_card">
                                     <div class="image">
-                                        <img src="./public/img/product/<?php echo $product['image']; ?>.png" alt="">
+                                        <img src="<?php echo $product['image']; ?>" alt="">
                                         <div class="icon"> <i class='bx bx-heart'></i><i class='bx bxs-right-arrow'></i></div>
                                         <div class="icon"><i class='bx bx-refresh'></i><i class='bx bxs-right-arrow'></i></div>
                                         <div class="icon" onclick="openZoomCard('<?php echo $product['id']; ?>','<?php echo $product['image']; ?>', '<?php echo $product['name']; ?>', '<?php echo $product['price']; ?>','<?php echo $product['description']; ?>', event)">
@@ -302,8 +267,8 @@
                 <!--  lấy số trang -->
 
 
-                
-                
+
+
                 <?php $pageNumber = intval((count($productPriceFilter) / 8) + 1); ?>
                 <div class="page flex m-[auto] w-[fit-content] p-[0.3rem] gap-[5px] rounded-[3px] bg-black items-center justify-center text-[16px]">
                     <form method="get" action="category.php">
@@ -352,7 +317,6 @@
 
             </div>
         </div>
-        <?php include './view/inc/_zoom-card.php' ?>
     </div>
 
 

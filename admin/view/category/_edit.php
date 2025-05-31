@@ -42,10 +42,6 @@
                                     <input type="text" name="name" value="<?php echo $category['name']; ?>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Image</label>
-                                    <input type="text" name="image" value="<?php echo $category['image']; ?>" class="form-control" id="exampleInputPassword1" placeholder="">
-                                </div>
-                                <div class="form-group">
                                     <label for="exampleInputPassword1">Description</label>
                                     <textarea id="myTextarea" type="text" name="description" class="form-control" id="exampleInputPassword1" placeholder=""><?php echo $category['description']; ?></textarea>
                                 </div>
