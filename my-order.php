@@ -13,19 +13,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         foreach ($orders as &$order) {
             $total = 0;
             foreach ($order['items'] as $item) {
-                $total += $item['price'] * $item['quantity'];
+                $total += $item['price'];
             }
-
-            // Cộng thêm 10% tiền ship
-            $order['total_amount'] = $total * 1.1;
+            $order['total_amount'] = $total + ($total * 0.1);
         }
         unset($order);
 
-
-        // Truyền dữ liệu $orders sang view
         include_once './view/_my-order.php';
     } else {
-        // Nếu chưa đăng nhập thì chuyển hướng hoặc báo lỗi
         header('Location: /login.php');
         exit;
     }

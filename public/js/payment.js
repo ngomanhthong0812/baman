@@ -1,5 +1,6 @@
 const code = document.getElementById("code").dataset.value;
 const total = document.getElementById("total").dataset.value;
+const payment_method = document.getElementById("payment_method").dataset.value;
 
 const bankId = "MB";
 const accountNo = "1025693979";
@@ -12,8 +13,12 @@ const qrUrl = `https://img.vietqr.io/image/${bankId}-${accountNo}-${template}.pn
 document.getElementById("qrCode").src = qrUrl;
 
 const intervalId = setInterval(() => {
-  checkPaid();
+  if (payment_method === "online") checkPaid();
 }, 1000);
+
+if (payment_method !== "online") {
+  clearInterval(intervalId);
+}
 
 async function checkPaid() {
   try {
@@ -42,7 +47,7 @@ async function checkPaid() {
             clearInterval(intervalId);
 
             alert("Thanh toán thành công! Cảm ơn bạn.");
-            window.location.href = "/baman-v2/index.php";
+            window.location.href = "/baman-v2/my-order.php";
           } else {
             console.error("❌ Lỗi khi cập nhật:", data.error);
           }

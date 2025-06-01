@@ -33,7 +33,7 @@
                     <span class="border-dashed border-r p-2">Order number: <p id="code" data-value='<?php echo $_SESSION['code']; ?>'><?php echo $_SESSION['code']; ?></p></span>
                     <span class="border-dashed border-r p-2">Date: <p class="flex-nowrap"><?php echo $_SESSION['date'] ?></p></span>
                     <span class="border-dashed border-r p-2">Total: <p id="total" data-value='<?php echo $_SESSION['total']; ?>'> <?php echo number_format($_SESSION['total'], 0, ',', '.'); ?> vnđ</p></span>
-                    <span class="px-3 p-2">Payment method: <p class="flex-nowrap"><?php echo $_SESSION['payment_method'] === 'cod' ? 'Cash on Delivery' : 'Online' ?></p></span>
+                    <span class="px-3 p-2">Payment method: <p class="flex-nowrap" id="payment_method" data-value="<?php echo $_SESSION['payment_method'] ?>"><?php echo $_SESSION['payment_method'] === 'cod' ? 'Cash on Delivery' : 'Online' ?></p></span>
                 </div>
             </div>
 
@@ -41,6 +41,7 @@
                 <div class="p-4 bg-white rounded shadow-md max-w-md mx-auto mt-10">
                     <div class="mt-4">
                         <div class="text-lg font-semibold mb-2">Payment QR Code:</div>
+                        <p class="text-red-400">Please do not change the transfer note.</p>
                         <img
                             id="qrCode"
                             src=""
@@ -62,11 +63,6 @@
                                 <span class="text-xl text-gray-400">&#8226;</span>
                                 <span class="font-medium">Account number:</span>
                                 <span id="accountNo" class="ml-1">1025693979</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <span class="text-xl text-gray-400">&#8226;</span>
-                                <span class="font-medium">Sort code:</span>
-                                <span class="ml-1"><?php echo $_SESSION['code']; ?></span>
                             </div>
                             <div class="flex items-center space-x-2">
                                 <span class="text-xl text-gray-400">&#8226;</span>

@@ -27,45 +27,56 @@
 
 
     <div class="my_body">
-        <div class="max-w-7xl mx-auto bg-white shadow-md rounded-md p-6 my-8">
-            <!-- Header row -->
-            <div class="hidden md:flex text-gray-600 font-semibold border-b border-gray-300 pb-2 mb-4">
-                <div class="flex-1 md:flex-[2]">Product</div>
-                <div class="flex-1">Order Number</div>
-                <div class="flex-1">Date</div>
-                <div class="flex-1">Total Amount</div>
-                <div class="flex-1">Payment Status</div>
-            </div>
+        <div class="max-w-7xl mx-auto bg-white shadow-md rounded-md p-6 my-8 overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+                <thead class="text-gray-600 font-semibold border-b border-gray-300">
+                    <tr>
+                        <th class="py-2 px-4">Order Number</th>
+                        <th class="py-2 px-4">Date</th>
+                        <th class="py-2 px-4">Product</th>
+                        <th class="py-2 px-4 text-center">Quantity</th>
+                        <th class="py-2 px-4 text-right">Total Amount</th>
+                        <th class="py-2 px-4 text-center">Payment Status</th>
+                    </tr>
+                </thead>
+                <tbody class="text-gray-700">
+                    <?php foreach ($orders as $order): ?>
+                        <?php foreach ($order['items'] as $index => $item): ?>
+                            <tr class="border-b border-gray-200">
+                                <?php if ($index === 0): ?>
+                                    <!-- Hiển thị thông tin đơn hàng chỉ 1 lần -->
+                                    <td class="py-3 px-4 align-top" rowspan="<?php echo count($order['items']); ?>">
+                                        <?php echo htmlspecialchars($order['code']); ?>
+                                    </td>
+                                    <td class="py-3 px-4 align-top" rowspan="<?php echo count($order['items']); ?>">
+                                        <?php echo htmlspecialchars($order['date']); ?>
+                                    </td>
+                                <?php endif; ?>
 
-            <!-- Order items -->
-            <div class="space-y-4">
-                <?php foreach ($orders as $order): ?>
-                    <div class="flex flex-col md:flex-row items-center md:items-center border border-gray-200 rounded-md p-4">
-                        <!-- Product info: image + name -->
-                        <div>
-                            <?php foreach ($order['items'] as $item): ?>
-                                <div class="flex flex-1 md:flex-[2] items-center mb-2 md:mb-0">
-                                    <img src="<?php echo htmlspecialchars($item['product_image']); ?>" alt="<?php echo htmlspecialchars($item['product_name']); ?>" class="w-16 h-16 object-cover rounded mr-4" />
-                                    <div class="text-gray-800 font-medium"><?php echo htmlspecialchars($item['product_name']); ?></div>
-                                </div>
-                            <?php endforeach; ?>
-                        </div>
+                                <td class="py-3 px-4 flex items-center">
+                                    <img src="<?php echo htmlspecialchars($item['product_image']); ?>" alt="" class="w-10 h-10 object-cover rounded mr-2">
+                                    <span><?php echo htmlspecialchars($item['product_name']); ?></span>
+                                </td>
+                                <td class="py-3 px-4 text-center"><?php echo $item['quantity']; ?></td>
 
-
-                        <div class="flex-1 text-gray-800 font-medium mb-1 md:mb-0">#<?php echo htmlspecialchars($order['code']); ?></div>
-                        <div class="flex-1 text-gray-700 mb-1 md:mb-0"><?php echo htmlspecialchars($order['date']); ?></div>
-                        <div class="flex-1 text-green-600 font-semibold mb-1 md:mb-0">
-                            $<?php echo number_format($order['total_amount'], 2); ?>
-                        </div>
-
-                        <div class="flex-1 <?php echo (strtolower($order['payment_status']) === 'paid') ? 'text-blue-600' : 'text-yellow-600'; ?> font-semibold mb-1 md:mb-0">
-                            <?php echo htmlspecialchars($order['payment_status']); ?>
-                        </div>
-                    </div>
-                <?php endforeach; ?>
-            </div>
+                                <?php if ($index === 0): ?>
+                                    <td class="py-3 px-4 text-right align-top" rowspan="<?php echo count($order['items']); ?>">
+                                        <?php echo number_format($order['total_amount'], 0, ',', '.'); ?> vnđ
+                                    </td>
+                                    <td class="py-3 px-4 text-center align-top" rowspan="<?php echo count($order['items']); ?>">
+                                        <span class="<?php echo (strtolower($order['payment_status']) === 'paid') ? 'text-blue-600' : 'text-yellow-600'; ?> font-semibold">
+                                            <?php echo htmlspecialchars($order['payment_status']); ?>
+                                        </span>
+                                    </td>
+                                <?php endif; ?>
+                            </tr>
+                        <?php endforeach; ?>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
         </div>
     </div>
+
 
 
     <?php include './view/inc/_footer.php' ?>

@@ -47,8 +47,8 @@
 
         <div class="product">
             <div class="banner_2 w-80 d-flex flex-col gap-2">
-                <img src="./public/img/banner/banner1_product2.webp" alt="" class="w-full">
-                <img src="./public/img/banner/banner2_product2.webp" alt="" class="w-full">
+                <img src="./public/img/banner/banner1_product2.png" alt="" class="w-full">
+                <img src="./public/img/banner/banner2_product2.png" alt="" class="w-full">
             </div>
             <div class="product_card">
                 <!-- begin product -->
@@ -88,8 +88,8 @@
 
         <div class="product pb-10">
             <div class="banner_2 w-80 d-flex flex-col gap-2">
-                <img src="./public/img/banner/banner1_product1.webp" alt="" class="w-full">
-                <img src="./public/img/banner/banner2_product1.webp" alt="" class="w-full">
+                <img src="./public/img/banner/banner1_product1.png" alt="" class="w-full">
+                <img src="./public/img/banner/banner2_product1.png" alt="" class="w-full">
             </div>
             <div class="product_card">
                 <!-- begin product -->

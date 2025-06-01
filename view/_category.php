@@ -214,8 +214,7 @@
                                             <?php echo $product['name']; ?>
                                         </p>
                                         <div class="price">
-                                            $
-                                            <?php echo $product['price']; ?>.00
+                                            <?php echo number_format($product['price'], 0, ',', '.'); ?> vnđ
                                         </div>
                                         <div class="content text-[12px] mt-[10px] truncate overflow-hidden ">
                                             <?php echo $product['description']; ?>
@@ -255,8 +254,7 @@
                                     <p>
                                         <?php echo $product['name']; ?>
                                     </p>
-                                    <div class="price">$
-                                        <?php echo $product['price']; ?>.00
+                                    <div class="price"> <?php echo number_format($product['price'], 0, ',', '.'); ?> vnđ
                                     </div>
                                 </a>
                             <?php } ?>
