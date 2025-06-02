@@ -18,9 +18,9 @@
     <div class="w-[100%] my_login">
         <div class="px-[1rem] m-auto flex flex-col justify-center bg-[#f5f5f5]">
             <ul class="flex gap-[5px] text-[12px] text-gray-300 leading-8 w-[100px] m-auto">
-                <li class="text-black"><a href="./public/home.php">HOME</a></li>
+                <li class="text-black"><a href="./public/home.php" class="text-nowrap">TRANG CHỦ</a></li>
                 &#8226;
-                <li class="text-black"><a href="./public/register.php">REGISTER</a></li>
+                <li class="text-black"><a href="./public/register.php" class="text-nowrap">ĐĂNG KÝ</a></li>
             </ul>
         </div>
     </div>
@@ -30,18 +30,18 @@
                 <form class="border text-[13px]" action="register.php" method="post">
                     <h2>Register</h2>
                     <div class="leading-6">
-                        <p>Already have an account,</p><a href="login.php" class="dang_ki font-[550]">Log in here</a>
+                        <p>Đã có tài khoản,</p><a href="login.php" class="dang_ki font-[550]">Đăng nhập ngay</a>
                     </div>
-                    <input type="text" id="name" name="name" value="<?php echo $arrUser['name']?>" placeholder="Name" required>
-                    <input type="email" id="email" name="email" value="<?php echo $arrUser['email']?>" placeholder="Email" required>
-                    <span class="absolute ml-[5px] text-[red] text-[10px] "><?php echo $arrUser['notificationEmail']?></span>
-                    <input type="text" id="phone" name="phone" value="<?php echo $arrUser['phone']?>" placeholder="Phone" required>
-                    <span class="absolute ml-[5px] text-[red] text-[10px] "><?php echo $arrUser['notificationPhone']?></span>
-                    <input type="password" id="password" name="password" value="<?php echo $arrUser['password']?>" placeholder="Password" required>
-                    <input type="password" id="password" name="passwordConfirm" value="<?php echo $arrUser['passwordConfirm']?>" placeholder="Confirm Password" required>
-                    <span class="absolute ml-[5px] text-[red] text-[10px] "><?php echo $arrUser['notificationPassword']?></span>
+                    <input type="text" id="name" name="name" value="<?php echo $arrUser['name'] ?>" placeholder="Name" required>
+                    <input type="email" id="email" name="email" value="<?php echo $arrUser['email'] ?>" placeholder="Email" required>
+                    <span class="absolute ml-[5px] text-[red] text-[10px] "><?php echo $arrUser['notificationEmail'] ?></span>
+                    <input type="text" id="phone" name="phone" value="<?php echo $arrUser['phone'] ?>" placeholder="Phone" required>
+                    <span class="absolute ml-[5px] text-[red] text-[10px] "><?php echo $arrUser['notificationPhone'] ?></span>
+                    <input type="password" id="password" name="password" value="<?php echo $arrUser['password'] ?>" placeholder="Password" required>
+                    <input type="password" id="password" name="passwordConfirm" value="<?php echo $arrUser['passwordConfirm'] ?>" placeholder="Confirm Password" required>
+                    <span class="absolute ml-[5px] text-[red] text-[10px] "><?php echo $arrUser['notificationPassword'] ?></span>
                     <input type="submit" value="Register" name="register">
-                    <div class="or">Or register with</div>
+                    <div class="or">Hoặc đăng ký với</div>
                     <div class="social-login">
                         <a href="https://m.facebook.com/login/?locale=vi_VN&refsrc=deprecated" class="facebook">Facebook</a>
                         <a href="https://accounts.google.com/InteractiveLogin/signinchooser?hl=vi&ifkv=Af_xneFlvO-Khlwmzix0y_WZYDCnbN7JQeJew3wxMMf6Y3YVcfnxQd6L03o9Kaa9ll-jMFdcjvPnmg&flowName=GlifWebSignIn&flowEntry=ServiceLogin" class="google">Google</a>

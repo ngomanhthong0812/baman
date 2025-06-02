@@ -39,111 +39,47 @@
             <div class="w-[25%] pr-[2.3rem]">
                 <div class="mt-[2rem]">
                     <span class="flex justify-between items-center text-[15px] font-[500]">
-                        <p>Filter By</p><button
-                            class="w-[20px] h-[20px] rounded-full bg-[#f5f5f5] text-[16px] flex items-center justify-center font-bold">-</button>
+                        <p>Filter By</p><button class="w-[20px] h-[20px] rounded-full bg-[#f5f5f5] text-[16px] flex items-center justify-center font-bold">-</button>
                     </span>
                     <span class="flex justify-between items-center text-[12px] font-[400] mt-[1rem]">
                         <button type="black" class="btnType text-[#7d7d7d] flex items-center gap-[10px] cursor-pointer">
-                            <div class="w-[11px] h-[11px] rounded-full bg-black border"></div>Black
+                            <div class="w-[11px] h-[11px] rounded-full bg-black border"></div>Đen
                         </button>
-                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center">3</div>
+                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center"></div>
                     </span>
                     <span class="flex justify-between items-center text-[12px] font-[400] mt-[0.5rem]">
                         <button type="blue" class="btnType text-[#7d7d7d] flex items-center gap-[10px] cursor-pointer">
-                            <div class="w-[11px] h-[11px] rounded-full bg-[blue] border"></div>Blue
+                            <div class="w-[11px] h-[11px] rounded-full bg-[blue] border"></div>Xanh biển
                         </button>
-                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center">5</div>
+                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center"></div>
                     </span>
                     <span class="flex justify-between items-center text-[12px] font-[400] mt-[0.5rem]">
                         <button type="brown" class="btnType text-[#7d7d7d] flex items-center gap-[10px] cursor-pointer">
-                            <div class="w-[11px] h-[11px] rounded-full bg-[brown] border"></div>Brown
+                            <div class="w-[11px] h-[11px] rounded-full bg-[brown] border"></div>Nâu
                         </button>
-                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center">3</div>
+                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center"></div>
                     </span>
                     <span class="flex justify-between items-center text-[12px] font-[400] mt-[0.5rem]">
                         <button type="green" class="btnType text-[#7d7d7d] flex items-center gap-[10px] cursor-pointer">
-                            <div class="w-[11px] h-[11px] rounded-full bg-[green] border"></div>Green
+                            <div class="w-[11px] h-[11px] rounded-full bg-[green] border"></div>Xanh lá
                         </button>
-                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center">4</div>
+                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center"></div>
                     </span>
                     <span class="flex justify-between items-center text-[12px] font-[400] mt-[0.5rem]">
                         <button type="white" class="btnType text-[#7d7d7d] flex items-center gap-[10px] cursor-pointer">
-                            <div class="w-[11px] h-[11px] rounded-full bg-[#ffffff] border"></div>White
+                            <div class="w-[11px] h-[11px] rounded-full bg-[#ffffff] border"></div>Trắng
                         </button>
-                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center">0</div>
+                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center"></div>
                     </span>
                     <span class="flex justify-between items-center text-[12px] font-[400] mt-[0.5rem]">
-                        <button type="yellow"
-                            class="btnType text-[#7d7d7d] flex items-center gap-[10px] cursor-pointer">
-                            <div class="w-[11px] h-[11px] rounded-full bg-[yellow] border"></div>Yellow
+                        <button type="yellow" class="btnType text-[#7d7d7d] flex items-center gap-[10px] cursor-pointer">
+                            <div class="w-[11px] h-[11px] rounded-full bg-[yellow] border"></div>Vàng
                         </button>
-                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center">4</div>
-                    </span>
-                </div>
-                <div class="mt-[2rem]">
-                    <span class="flex justify-between items-center text-[15px] font-[500]">
-                        <p>Filter By Sizes</p><button
-                            class="w-[20px] h-[20px] rounded-full bg-[#f5f5f5] text-[16px] flex items-center justify-center font-bold">-</button>
-                    </span>
-                    <span class="flex justify-between items-center text-[12px] font-[400] mt-[1rem]">
-                        <div class="text-[#7d7d7d] flex items-center gap-[10px] cursor-pointer">10K</div><button
-                            class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center">4</button>
-                    </span>
-                    <span class="flex justify-between items-center text-[12px] font-[400] mt-[0.5rem]">
-                        <div class="text-[#7d7d7d] flex items-center gap-[10px] cursor-pointer">14K</div><button
-                            class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center">7</button>
-                    </span>
-                    <span class="flex justify-between items-center text-[12px] font-[400] mt-[0.5rem]">
-                        <div class="text-[#7d7d7d] flex items-center gap-[10px] cursor-pointer">18K</div><button
-                            class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center">5</button>
-                    </span>
-                    <span class="flex justify-between items-center text-[12px] font-[400] mt-[0.5rem]">
-                        <div class="text-[#7d7d7d] flex items-center gap-[10px] cursor-pointer">22K</div><button
-                            class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center">7</button>
-                    </span>
-                    <span class="flex justify-between items-center text-[12px] font-[400] mt-[0.5rem]">
-                        <div class="text-[#7d7d7d] flex items-center gap-[10px] cursor-pointer">24K</div><button
-                            class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center">8</button>
-                    </span>
-                    <span class="flex justify-between items-center text-[12px] font-[400] mt-[0.5rem]">
-                        <div class="text-[#7d7d7d] flex items-center gap-[10px] cursor-pointer">8k</div><button
-                            class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center">3</button>
+                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center"></div>
                     </span>
                 </div>
             </div>
             <div class="w-[75%] pl-[1rem]">
-                <nav class="py-[2.5rem]">
-                    <ul class="flex text-[12px] font-[500] gap-[15px]">
-                        <li class="flex items-center text-[14px] text-[#7d7d7d]">Fast Filters:</li>
-                        <li
-                            class="flex items-center gap-[7px] border px-[1.2rem] rounded-[20px] py-[0.3rem] hover:bg-black hover:text-white duration-200 ease-in-out cursor-pointer">
-                            <img src="./public/img/icon_categories/dollar.png" alt="" class="w-[15px]">FEATURED
-                        </li>
-                        <li
-                            class="flex items-center gap-[7px] border px-[1.2rem] rounded-[20px] py-[0.3rem] hover:bg-black hover:text-white duration-200 ease-in-out cursor-pointer">
-                            <img src="./public/img/icon_categories/promotional.png" alt="" class="w-[15px]">BEST
-                            SELLERS
-                        </li>
-                        <li
-                            class="flex items-center gap-[7px] border px-[1.2rem] rounded-[20px] py-[0.3rem] hover:bg-black hover:text-white duration-200 ease-in-out cursor-pointer">
-                            <img src="./public/img/icon_categories/rating.png" alt="" class="w-[15px]">TOP RATED
-                        </li>
-                        <li
-                            class="flex items-center gap-[7px] border px-[1.2rem] rounded-[20px] py-[0.3rem] hover:bg-black hover:text-white duration-200 ease-in-out cursor-pointer">
-                            <img src="./public/img/icon_categories/discount.png" alt="" class="w-[15px]">ON SALE
-                        </li>
-                        <li
-                            class="flex items-center gap-[7px] border px-[1.2rem] rounded-[20px] py-[0.3rem] hover:bg-black hover:text-white duration-200 ease-in-out cursor-pointer">
-                            <img src="./public/img/icon_categories/box.png" alt="" class="w-[15px]">IN STOCK
-                        </li>
-                        <li
-                            class="flex items-center gap-[7px] border px-[1.2rem] rounded-[20px] py-[0.3rem] hover:bg-black hover:text-white duration-200 ease-in-out cursor-pointer">
-                            SELECT COLOR</li>
-                        <li
-                            class="flex items-center gap-[7px] border px-[1.2rem] rounded-[20px] py-[0.3rem] hover:bg-black hover:text-white duration-200 ease-in-out cursor-pointer">
-                            SELECT PATTERN</li>
-                    </ul>
-                </nav>
                 <div class="container_title_category text-[15px] flex items-center justify-between text-[#7d7d7d]">
                     <span class="title flex">Showing all
                         <?php echo count($productSearch) ?> results
@@ -242,8 +178,7 @@
                                             <?php echo $product['name']; ?>
                                         </p>
                                         <div class="price">
-                                            $
-                                            <?php echo $product['price']; ?>.00
+                                            <?php echo number_format($product['price'], 0, ',', '.'); ?> vnđ
                                         </div>
                                         <div class="content text-[12px] mt-[10px] truncate overflow-hidden ">
                                             <?php echo $product['description']; ?>
@@ -254,15 +189,13 @@
                                             </div>
                                         </div>
                                         <div class="quantity">
-                                            <div class="text-[13px] text-[#7d7d7d] mt-[10px]">Available: <b class="text-black">
+                                            <div class="text-[13px] text-[#7d7d7d] mt-[10px]">Có sẵn: <b class="text-black">
                                                     <?php echo $product['quantity']; ?>
                                                 </b>
                                             </div>
                                         </div>
                                         <button class="bg-black text-white text-[13px] px-[2.5rem] py-[0.4rem] mt-[10px]"
-                                            onclick="add_cart('<?php echo $product['id'] ?>','<?php echo $product['image'] ?>','<?php echo $product['name'] ?>','<?php echo $product['price'] ?>',event)">Add
-                                            to
-                                            cart</button>
+                                            onclick="add_cart('<?php echo $product['id'] ?>','<?php echo $product['image'] ?>','<?php echo $product['name'] ?>','<?php echo $product['price'] ?>',event)">Thêm vào giỏ hàng</button>
                                     </div>
                                 </a>
                             <?php } ?>

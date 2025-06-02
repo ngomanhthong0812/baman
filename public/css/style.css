@@ -18,7 +18,7 @@ body {
 }
 .container_navbar {
   width: 100%;
-  background-color: black;
+  background-color: #ffd500;
   padding: 0 1rem;
 }
 .navbar {
@@ -117,7 +117,7 @@ body {
   border-radius: 50%;
   position: absolute;
   font-size: 10px;
-  background-color: #060606;
+  background-color: #ffd500;
   color: white;
   display: flex;
   align-items: center;
@@ -899,7 +899,7 @@ form p {
 
 /* footer */
 footer {
-  background-color: #000000;
+  background-color: #ffd500;
 }
 .footer {
   max-width: var(--my-width);
@@ -1760,7 +1760,7 @@ footer {
 }
 .contact .contact_2 .email button {
   height: 52px;
-  background-color: #000000;
+  background-color: #ffd500;
   border: none;
   padding: 0rem 1rem;
   font-size: 13px;
@@ -2448,7 +2448,7 @@ span.price {
 
 .form_dang_nhap_2 input[type="submit"] {
   width: 100%;
-  background-color: #000000;
+  background-color: #ffd500;
   color: #fff;
   padding: 10px;
   border-radius: 5px;

@@ -6,6 +6,7 @@ $informationError = array(
     'address' => "",
     'email' => "",
     'firstname' => "",
+    'payment_method' => "",
 );
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $total = 0;
@@ -14,6 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $informationError['address'] = $_POST['address'];
         $informationError['firstname'] = $_POST['firstname'];
         $informationError['email'] = $_POST['email'];
+        $informationError['payment_method'] = $_POST['payment_method'];
         if ($_POST['phone'] != "" && $_POST['address'] != "") {
             $pattern = '/^(03|05|07|08|09)[0-9]{8}$/';
             $checkPhone = preg_match($pattern, $_POST['phone']);
@@ -64,12 +66,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         } else {
             if ($_POST['phone'] == "" && $_POST['address'] == "") {
-                $informationError['error'] = "error: &nbsp; Phone number and address cannot be left blank.";
+                $informationError['error'] = "error: &nbsp; Số điện thoại và địa chỉ không được để trống.";
             } else {
                 if ($_POST['phone'] != "" && $_POST['address'] == "") {
-                    $informationError['error'] = "error: &nbsp; Address cannot be left blank.";
+                    $informationError['error'] = "error: &nbsp; Địa chỉ không được để trống.";
                 } else {
-                    $informationError['error'] = "error: &nbsp; Phone number cannot be left blank.";
+                    $informationError['error'] = "error: &nbsp; Số điện thoại không được để trống hoặc không đúng định dạng.";
                 }
             }
             include_once './view/_checkout.php';

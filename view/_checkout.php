@@ -24,18 +24,18 @@
           <h2>AMAN</h2>
         </div>
         <div class="pay">
-          <h2>Checkout</h2>
+          <h2>Thanh toán</h2>
         </div>
         <img src="./public/img/ship/7.png" alt="">
       </div>
       <div class="flex border-[#c9c9c9] text-[#414141] border-b-[2px] py-[0.5rem] pt-[3rem]">
         <div class="w-[30%]">Item</div>
         <div class="w-[70%] flex">
-          <span class="w-[20%] flex justify-center">Shipped from</span>
-          <span class="w-[20%] flex justify-center">Attributes</span>
-          <span class="w-[20%] flex justify-center">Quantity</span>
-          <span class="w-[20%] flex justify-center">Price</span>
-          <span class="w-[20%] flex justify-center">Total</span>
+          <span class="w-[20%] flex justify-center">Nơi gửi hàng</span>
+          <span class="w-[20%] flex justify-center">Thuộc tính</span>
+          <span class="w-[20%] flex justify-center">Số lượng</span>
+          <span class="w-[20%] flex justify-center">Giá</span>
+          <span class="w-[20%] flex justify-center">Tổng</span>
         </div>
       </div>
       <div class="product_cart">
@@ -75,23 +75,29 @@
           <?php } ?>
         <?php } ?>
         <div class="container_sanPham flex items-center justify-center">
-          <button class="addDeliveryInformation">Add delivery information</button>
+          <button class="addDeliveryInformation">Thêm thông tin giao hàng</button>
         </div>
         <span class="absolute text-[red]"><?php echo $informationError['error'] ?></span>
 
 
         <div class="flex justify-end">
           <div class="w-[250px]">
-            <div class="w-[100%] flex justify-between">Subtotal: <span class="text-black font-[450]"><span
-                  class="subtotal"></span> đ</div>
-            <div class="w-[100%] flex justify-between leading-[40px]">Est, shipping: <span
-                class="text-black font-[450]"><span class="shippingTotal"></span> đ</div>
-            <div class="w-[100%] flex justify-between ">Total: <span
-                class="text-[20px] font-[500] text-[#000000]"><span class="total"></span> đ</div>
+            <div class="w-[100%] flex justify-between">
+              Tổng phụ:
+              <span class="text-black font-[450]"><span class="subtotal"></span> đ</span>
+            </div>
+            <div class="w-[100%] flex justify-between leading-[40px]">
+              Phí vận chuyển dự kiến:
+              <span class="text-black font-[450]"><span class="shippingTotal"></span> đ</span>
+            </div>
+            <div class="w-[100%] flex justify-between">
+              Tổng cộng:
+              <span class="text-[20px] font-[500] text-[#000000]"><span class="total"></span> đ</span>
+            </div>
           </div>
         </div>
         <form action="checkout.php" method="post" class="buy_now mt-[20px] p-0">
-          <input type="submit" name="btnCheckout" value="Continue to checkout" class="btn bg-black hover:opacity-[0.8]">
+          <input type="submit" name="btnCheckout" value="Thanh toán ngay" class="btn bg-black hover:opacity-[0.8]">
 
 
           <!-- checkout -->
@@ -105,25 +111,25 @@
                   <form action="checkout.php" method="post">
                     <div class="row">
                       <div class="col-50">
-                        <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                        <label for="fname"><i class="fa fa-user"></i> Họ và tên</label>
                         <input type="text" id="fname" name="firstname" placeholder="John M. Doe" value="<?php echo $informationError['firstname'] ?>" />
                         <label for="email"><i class="fa fa-envelope"></i> Email</label>
                         <input type="text" id="email" name="email" placeholder="john@example.com" value="<?php echo $informationError['email'] ?>" />
-                        <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                        <label for="adr"><i class="fa fa-address-card-o"></i> Địa chỉ</label>
                         <input type="text" id="adr" name="address" placeholder="542 W. 15th Street" value="<?php echo $informationError['address'] ?>" />
-                        <label for="city"><i class="fa fa-institution"></i> Phone</label>
+                        <label for="city"><i class="fa fa-institution"></i> Số điện thoại</label>
                         <input type="text" id="city" name="phone" placeholder="" value="<?php echo $informationError['phone'] ?>" />
-                        <label for="payment_method">Payment Method</label>
+                        <label for="payment_method">Hình thức thanh toán</label>
                         <select name="payment_method" class="form-control" id="payment_method">
-                          <option value="cod">Cash on Delivery</option>
-                          <option value="online">Online</option>
+                          <option value="cod" <?php if ($informationError['payment_method'] === 'cod') echo 'selected'; ?>>Thanh toán khi nhận hàng</option>
+                          <option value="online" <?php if ($informationError['payment_method'] === 'online') echo 'selected'; ?>>Thanh toán online</option>
                         </select>
                       </div>
                     </div>
                     <label class="flex justify-between gap-5">
                       <div> <input type="checkbox" checked="checked" name="sameadr" />
-                        Shipping address same as billing</div>
-                      <div class="add_now cursor-pointer bg-black hover:opacity-[0.8]">Add</div>
+                        Địa chỉ giao hàng giống địa chỉ thanh toán</div>
+                      <div class="add_now cursor-pointer bg-black hover:opacity-[0.8]">Thêm</div>
                     </label>
                   </form>
                 </div>

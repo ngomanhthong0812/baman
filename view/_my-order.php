@@ -18,9 +18,9 @@
     <div class="w-[100%] my_login">
         <div class="max-w-[1540px] px-[1rem] m-auto flex flex-col justify-center bg-[#f5f5f5]">
             <ul class="flex gap-[5px] text-[12px] text-gray-300 leading-8 w-[100px] m-auto">
-                <li class="text-black"><a href="./public/home.php">HOME</a></li>
+                <li class="text-black"><a href="./public/home.php">TRANG CHỦ</a></li>
                 &#8226;
-                <li class="text-black text-nowrap"><a href="./public/login.php">My Orders</a></li>
+                <li class="text-black text-nowrap"><a href="./public/login.php">Đơn hàng của tôi</a></li>
             </ul>
         </div>
     </div>
@@ -32,11 +32,11 @@
                 <thead class="text-gray-600 font-semibold border-b border-gray-300">
                     <tr>
                         <th class="py-2 px-4">Order Number</th>
-                        <th class="py-2 px-4">Date</th>
-                        <th class="py-2 px-4">Product</th>
-                        <th class="py-2 px-4 text-center">Quantity</th>
-                        <th class="py-2 px-4 text-right">Total Amount</th>
-                        <th class="py-2 px-4 text-center">Payment Status</th>
+                        <th class="py-2 px-4">Ngày</th>
+                        <th class="py-2 px-4">Sản phẩm</th>
+                        <th class="py-2 px-4 text-center">Số lượng</th>
+                        <th class="py-2 px-4 text-right">Tổng tiền</th>
+                        <th class="py-2 px-4 text-center">Trạng thái thanh toán</th>
                     </tr>
                 </thead>
                 <tbody class="text-gray-700">

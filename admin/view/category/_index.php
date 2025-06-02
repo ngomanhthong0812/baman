@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Dashboard - SB Admin</title>
+    <title>Tổng quan - SB Admin</title>
     <link rel="shortcut icon" href="../../public/img/logo/123.png" type="image/x-icon">
     <link href="../../public/admin/css/style.css" rel="stylesheet" />
     <script src="../../public/admin/js/all.js" crossorigin="anonymous"></script>
@@ -20,9 +20,9 @@
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4">
-                    <h1 class="mt-4">Dashboard</h1>
+                    <h1 class="mt-4">Tổng quan</h1>
                     <ol class="breadcrumb mb-4">
-                        <li class="breadcrumb-item active">Dashboard</li>
+                        <li class="breadcrumb-item active">Tổng quan</li>
                     </ol>
                     <div class="card mb-4">
                         <div class="card-header">
@@ -35,8 +35,8 @@
                                     <tr>
                                         <th>STT</th>
                                         <th>ID</th>
-                                        <th>Name</th>
-                                        <th>Description</th>
+                                        <th>Tên</th>
+                                        <th>Mô tả</th>
                                         <th></th>
                                         <th></th>
                                     </tr>
@@ -45,8 +45,8 @@
                                     <tr>
                                         <th>STT</th>
                                         <th>ID</th>
-                                        <th>Name</th>
-                                        <th>Description</th>
+                                        <th>Tên</th>
+                                        <th>Mô tả</th>
                                         <th></th>
                                         <th></th>
                                     </tr>
@@ -69,11 +69,11 @@
                                             </td>
                                             <td>
                                                 <a class="btn btn-primary"
-                                                    href="edit.php?category_id=<?php echo $category['id']; ?>">Edit</a>
+                                                    href="edit.php?category_id=<?php echo $category['id']; ?>">Sửa</a>
                                             </td>
                                             <td>
                                                 <a class="btn btn-danger"
-                                                    href="delete.php?category_id=<?php echo $category['id']; ?>">Delete</a>
+                                                    href="delete.php?category_id=<?php echo $category['id']; ?>">Xoá</a>
                                             </td>
                                         </tr>
                                     <?php } ?>

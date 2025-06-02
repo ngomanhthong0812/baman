@@ -5,7 +5,7 @@
                 <div class="sb-sidenav-menu-heading">Core</div>
                 <a class="nav-link" href="../statistics/index.php">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                    Dashboard
+                    Tổng quan
                 </a>
                 <div class="sb-sidenav-menu-heading">Interface</div>
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseCategory" aria-expanded="false" aria-controls="collapseLayouts">
@@ -56,7 +56,7 @@
         </div>
         <div class="sb-sidenav-footer">
             <div class="small">Admin:</div>
-            <?php echo $_SESSION['email']?>
+            <?php echo $_SESSION['email'] ?>
         </div>
     </nav>
 </div>

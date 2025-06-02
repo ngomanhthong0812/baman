@@ -192,7 +192,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         update_payment_status($data['code'], $data['payment_status']);
         echo json_encode(["success" => true]);
     } else {
-        echo json_encode(["success" => false, "error" => "Thiếu CODE hoặc payment_status"]);
+        // echo json_encode(["success" => false, "error" => "Thiếu CODE hoặc payment_status"]);
     }
 }
 

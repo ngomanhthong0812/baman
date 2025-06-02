@@ -3,9 +3,9 @@ var index = 0;
 function title() {
   var titleTop = document.querySelector(".navbar .title");
   var arrTitle = [
-    "YOU CAN PAY WITH CRYPTOCURRENCIES!",
-    "FREE SHIPPING ON ALL ORDERS OVER $75",
-    "NEWS: DELIVERY TO THE DOOR IS ACTIVE!",
+    "BẠN CÓ THỂ THANH TOÁN BẰNG TIỀN ĐIỆN TỬ!",
+    "MIỄN PHÍ VẬN CHUYỂN CHO ĐƠN HÀNG TRÊN 75$",
+    "TIN MỚI: GIAO HÀNG TẬN NHÀ ĐÃ HOẠT ĐỘNG!",
   ];
 
   titleTop.classList.add("title_top");
@@ -282,16 +282,15 @@ var spinner = document.querySelector(".container_filter-1 .spinner_1");
 let indexProductLength = productFilter1.length;
 
 // Trang web đã tải hoàn toàn
-window.addEventListener('load', function () {
+window.addEventListener("load", function () {
   // Trang web đã tải hoàn toàn
-  var val_1 = document.querySelector(".val-1 svg")
-  val_1.style.color = "black"
+  var val_1 = document.querySelector(".val-1 svg");
+  val_1.style.color = "black";
   for (var i = 8; i < productFilter1.length; i++) {
-    productFilter1[i].style.display = "none"
-    productFilter2[i].style.display = "none"
+    productFilter1[i].style.display = "none";
+    productFilter2[i].style.display = "none";
   }
 });
-
 
 function load_more() {
   setTimeout(function () {
@@ -402,7 +401,7 @@ function rmvCart() {
         parentCart_1.style.padding = "0";
       }
     });
-  } catch (error) { }
+  } catch (error) {}
 }
 rmvCart();
 
@@ -454,7 +453,7 @@ try {
   isLogin.addEventListener("click", function () {
     document.querySelector(".account_user").classList.toggle("hidden");
   });
-} catch (error) { }
+} catch (error) {}
 function customQuantity() {
   try {
     var quantity = document.getElementById("quantity");
@@ -470,7 +469,7 @@ function customQuantity() {
           quantity.value--;
         }
       });
-  } catch (error) { }
+  } catch (error) {}
 }
 customQuantity();
 
@@ -484,7 +483,7 @@ try {
 
     for (var i = 0; i < total.length; i++) {
       var rawText = total[i].innerHTML;
-      var cleaned = rawText.replace(/[^\d]/g, ''); // chỉ giữ lại số
+      var cleaned = rawText.replace(/[^\d]/g, ""); // chỉ giữ lại số
       var number = parseInt(cleaned);
       productTotal += number;
     }
@@ -492,18 +491,16 @@ try {
     var shipping = parseInt(productTotal * 0.1);
 
     console.log(productTotal);
-    
 
-    txtSubtotal.innerHTML = productTotal.toLocaleString('vi-VN');
-    txtShippingTotal.innerHTML = shipping.toLocaleString('vi-VN');
-    txtTotal.innerHTML = (productTotal + shipping).toLocaleString('vi-VN');
+    txtSubtotal.innerHTML = productTotal.toLocaleString("vi-VN");
+    txtShippingTotal.innerHTML = shipping.toLocaleString("vi-VN");
+    txtTotal.innerHTML = (productTotal + shipping).toLocaleString("vi-VN");
   }
 
   productToltal();
 } catch (error) {
   console.error(error);
 }
-
 
 function isLoad() {
   if (indexProductLength < 8) {
@@ -514,11 +511,11 @@ function isLoad() {
 
 // lọc sản phẩm
 function productType() {
-  const typeButtons = document.querySelectorAll('.btnType');
-  const productCard1 = document.querySelectorAll('.product_card1 .my_card');
-  const productCard2 = document.querySelectorAll('.product_card2 .my_card');
+  const typeButtons = document.querySelectorAll(".btnType");
+  const productCard1 = document.querySelectorAll(".product_card1 .my_card");
+  const productCard2 = document.querySelectorAll(".product_card2 .my_card");
   const title = document.querySelector(".container_title_category .title");
-  var nameType = '';
+  var nameType = "";
   typeButtons.forEach((button) => {
     button.addEventListener("click", function () {
       var index = 0;
@@ -526,37 +523,50 @@ function productType() {
       nameType = type;
       typeButtons.forEach((btn) => {
         if (btn !== button) {
-          btn.innerHTML = `<div class="w-[11px] h-[11px] rounded-full bg-[` + btn.getAttribute("type") + `] border"></div></div>` + btn.getAttribute("type") + `` // Xoá innerHTML của button khác
+          btn.innerHTML =
+            `<div class="w-[11px] h-[11px] rounded-full bg-[` +
+            btn.getAttribute("type") +
+            `] border"></div></div>` +
+            btn.getAttribute("type") +
+            ``; // Xoá innerHTML của button khác
         }
       });
-      button.innerHTML = `<div class="flex items-center justify-center gap-[2px]"><i class='bx bxs-x-circle cursor-pointer hover:font-[600]' onclick="removeFilter()"></i><div class="w-[11px] h-[11px] rounded-full bg-[` + nameType + `] border"></div></div>` + nameType + ``
+      button.innerHTML =
+        `<div class="flex items-center justify-center gap-[2px]"><i class='bx bxs-x-circle cursor-pointer hover:font-[600]' onclick="removeFilter()"></i><div class="w-[11px] h-[11px] rounded-full bg-[` +
+        nameType +
+        `] border"></div></div>` +
+        nameType +
+        ``;
       productCard1.forEach((mycart) => {
-        if (mycart.getAttribute('type') != type) {
+        if (mycart.getAttribute("type") != type) {
           mycart.style.display = "none";
         } else {
           mycart.style.display = "flex";
           index++;
         }
-      })
+      });
       productCard2.forEach((mycart) => {
-        if (mycart.getAttribute('type') != type) {
+        if (mycart.getAttribute("type") != type) {
           mycart.style.display = "none";
         } else {
           mycart.style.display = "block";
         }
-      })
+      });
       indexProductLength = index;
       if (indexProductLength < 8) {
-        document.querySelector(".page").classList.add('hidden');
+        document.querySelector(".page").classList.add("hidden");
       } else {
-        document.querySelector(".page").classList.remove('hidden');
+        document.querySelector(".page").classList.remove("hidden");
       }
-      title.innerHTML = `<span class="title flex">Showing all ` + indexProductLength + ` results <span class="px-[1rem] flex items-center justify-center">Filter: &nbsp<i class='bx bxs-x-circle cursor-pointer hover:font-[600]' onclick="removeFilter()"></i>&nbsp<p class="text-black font-700">` + nameType + `</p></span>   </span>`
-      isLoad()
-    })
-  })
-
-
+      title.innerHTML =
+        `<span class="title flex">Showing all ` +
+        indexProductLength +
+        ` results <span class="px-[1rem] flex items-center justify-center">Filter: &nbsp<i class='bx bxs-x-circle cursor-pointer hover:font-[600]' onclick="removeFilter()"></i>&nbsp<p class="text-black font-700">` +
+        nameType +
+        `</p></span>   </span>`;
+      isLoad();
+    });
+  });
 }
 
 function removeFilter() {
@@ -565,28 +575,26 @@ function removeFilter() {
 
 productType();
 
-
-var slider = document.getElementById('slider');
-var minPriceInput = document.getElementById('minPrice');
-var maxPriceInput = document.getElementById('maxPrice');
-var minPriceDataInput = document.getElementById('minPriceData');
-var maxPriceDataInput = document.getElementById('maxPriceData');
+var slider = document.getElementById("slider");
+var minPriceInput = document.getElementById("minPrice");
+var maxPriceInput = document.getElementById("maxPrice");
+var minPriceDataInput = document.getElementById("minPriceData");
+var maxPriceDataInput = document.getElementById("maxPriceData");
 
 noUiSlider.create(slider, {
   start: [2000000, 30000000],
   connect: true,
   range: {
-    'min': 1000000,
-    'max': 40000000
-  }
+    min: 1000000,
+    max: 40000000,
+  },
 });
 
-slider.noUiSlider.on('update', function (values, handle) {
+slider.noUiSlider.on("update", function (values, handle) {
   var min = parseInt(values[0]);
   var max = parseInt(values[1]);
 
   console.log(min);
-  
 
   // Hiển thị giá trị min và max lấy từ thanh trượt
   minPriceInput.innerHTML = formatVND(min);
@@ -595,10 +603,13 @@ slider.noUiSlider.on('update', function (values, handle) {
   maxPriceDataInput.value = max;
 });
 
-document.getElementById('sortBy').addEventListener('change', function() {
-  document.getElementById('sortByForm').submit();
+document.getElementById("sortBy").addEventListener("change", function () {
+  document.getElementById("sortByForm").submit();
 });
 
 function formatVND(number) {
-  return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(number);
+  return new Intl.NumberFormat("vi-VN", {
+    style: "currency",
+    currency: "VND",
+  }).format(number);
 }

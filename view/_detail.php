@@ -38,9 +38,9 @@
                     </div>
                     <div class="details w-[60%]">
                         <div class="menu flex gap-[5px] text-[12px] text-black">
-                            <a href="#">HOME</a>
+                            <a href="#">TRANG CHỦ</a>
                             <li class="p-0 text-gray-300">/</li>
-                            <a href="#">PRODUCT</a>
+                            <a href="#">SẢN PHẨM</a>
                             <li class="p-0 text-gray-300">/</li>
                             <li class="p-0 name_product_1">
                                 <?php echo $product['name'] ?>
@@ -54,41 +54,36 @@
                         </div>
                         <div class="flex items-center text-[15px] rounded-[5px] bg-[#f8f9fa] border px-[1rem] py-[0.5rem]">
                             <div class="w-[10%]"><i class='bx bxs-timer text-[50px] text-red-500'></i></div>
-                            <div class="w-[80%] pr-[50px] text-gray-500 font-[400]">Time remaining until the end of the offer;
-                                Hurry to take advantage of the offer</div>
-                            <div class="w-[10%]">Expired</div>
+                            <div class="w-[80%] pr-[50px] text-gray-500 font-[400]">Nhanh tay tận dụng ưu đãi</div>
+                            <div class="w-[10%]">Đã hết hạn</div>
                         </div>
                         <div class="price">
                             <?php echo number_format($product['price'], 0, ',', '.'); ?> vnđ
                         </div>
                         <?php if ($product['quantity'] == 0) { ?>
-                            <span class="status m-0 rounded-[10px] max-w-full inline-block">OUT OF STOCK</span>
+                            <span class="status m-0 rounded-[10px] max-w-full inline-block">Hết hàng</span>
                         <?php } else { ?>
-                            <span class="status bg-[#f5f4ee] text-[black] m-0 rounded-[10px] max-w-full inline-block"><?php echo $product['quantity'] ?> IN STOCK (CAN BE BACKORDERED)</span>
+                            <span class="status bg-[#f5f4ee] text-[black] m-0 rounded-[10px] max-w-full inline-block"><?php echo $product['quantity'] ?> Còn hàng (có thể đặt hàng trước)</span>
                         <?php } ?>
                         <div>
                             <div class="flex cursor-pointer gap-[7px] text-[13px] font-[500] items-center mt-[13px]">
                                 <div class="w-[30px] h-[30px] flex items-center justify-center rounded-full bg-[#7a808d]"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                                         <path d="M112 0C85.5 0 64 21.5 64 48V96H16c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 272c8.8 0 16 7.2 16 16s-7.2 16-16 16H64 48c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 240c8.8 0 16 7.2 16 16s-7.2 16-16 16H64 16c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 208c8.8 0 16 7.2 16 16s-7.2 16-16 16H64V416c0 53 43 96 96 96s96-43 96-96H384c0 53 43 96 96 96s96-43 96-96h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V288 256 237.3c0-17-6.7-33.3-18.7-45.3L512 114.7c-12-12-28.3-18.7-45.3-18.7H416V48c0-26.5-21.5-48-48-48H112zM544 237.3V256H416V160h50.7L544 237.3zM160 368a48 48 0 1 1 0 96 48 48 0 1 1 0-96zm272 48a48 48 0 1 1 96 0 48 48 0 1 1 -96 0z" />
                                     </svg></div>
-                                DELIVERY & RETURN
-                            </div>
-                            <div class="flex cursor-pointer gap-[7px] text-[13px] font-[500] items-center mt-[13px]">
-                                <div class="w-[30px] h-[30px] flex items-center justify-center rounded-full bg-[#7a808d]"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                                        <path d="M177.9 494.1c-18.7 18.7-49.1 18.7-67.9 0L17.9 401.9c-18.7-18.7-18.7-49.1 0-67.9l50.7-50.7 48 48c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6l-48-48 41.4-41.4 48 48c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6l-48-48 41.4-41.4 48 48c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6l-48-48 41.4-41.4 48 48c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6l-48-48 50.7-50.7c18.7-18.7 49.1-18.7 67.9 0l92.1 92.1c18.7 18.7 18.7 49.1 0 67.9L177.9 494.1z" />
-                                    </svg></div>
-                                SIZE GUIDE
+                                Giao hàng & Trả hàng
                             </div>
                             <div class="flex cursor-pointer gap-[7px] text-[13px] font-[500] items-center mt-[13px]">
                                 <div class="w-[30px] h-[30px] flex items-center justify-center rounded-full bg-[#7a808d]"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                                         <path d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H64C28.7 64 0 92.7 0 128v16 48V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V192 144 128c0-35.3-28.7-64-64-64H344V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H152V24zM48 192H400V448c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192z" />
                                     </svg></div>
-                                ESTIMATED DELIVERY: OCT 10 OCT 14
+                                Miễn phí giao hàng toàn quốc
                             </div>
                         </div>
                         <div class="bg-[#fffcf2] flex items-center p-[1rem] gap-[10px] rounded-[5px] border-t border-b border-l border-r border-[#fff5d2]">
-                            <i class="bx bx-shopping-bag text-[20px] text-[#ffdb66]"></i><span class="text-[12px] font-[500] tracking-wide">31 people have this in their carts right now. It's
-                                running out!</span>
+                            <i class="bx bx-shopping-bag text-[20px] text-[#ffdb66]"></i>
+                            <span class="text-[12px] font-[500] tracking-wide">
+                                Hiện có 31 người đang cho sản phẩm này vào giỏ. Sắp hết hàng rồi!
+                            </span>
                         </div>
 
                         <form action="cart.php" method="post" class="flex gap-[1rem] py-[0.7rem]">
@@ -104,15 +99,15 @@
                                 <div class="cursor-pointer w-[30px] h-[30px] font-[500] shadow-sm rounded-full text-black flex items-center justify-center" id="addQuantity">+</div>
                             </span>
                             <?php if ($product['quantity'] == 0) { ?>
-                                <div class="bg-[red] text-[13px] text-white px-[3rem] py-[0.5rem] flex justify-center items-center hover:opacity-[0.8]">OUT OF STOCK</div>
+                                <div class="bg-[red] text-[13px] text-white px-[3rem] py-[0.5rem] flex justify-center items-center hover:opacity-[0.8]">HẾT HÀNG</div>
                             <?php } else { ?>
-                                <button class="bg-black text-[13px] text-white px-[3rem] py-[0.5rem] flex justify-center items-center hover:opacity-[0.8]">Add
-                                    to cart</button>
+                                <button class="bg-black text-[13px] text-white px-[3rem] py-[0.5rem] flex justify-center items-center hover:opacity-[0.8]">Thêm
+                                    vào giỏ hàng</button>
                             <?php } ?>
                         </form>
 
                         <div class="flex gap-[5px] items-center">
-                            <div class="title text-[13px] font-[500]">Share:</div>
+                            <div class="title text-[13px] font-[500]">Chia sẽ:</div>
                             <div class="w-[30px] h-[30px] flex items-center justify-center rounded-full bg-[#3b5998] cursor-pointer">
                                 <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                                     <style>
@@ -180,16 +175,13 @@
         <?php } ?>
         <div class="product_content py-[5rem] max-w-[1540px] m-auto">
             <div class="flex gap-[20px] font-[600] text-[14.3px] border-b py-[0.6rem] relative">
-                <div class="text-gray-500 cursor-pointer">DESCRIPTION</div>
+                <div class="text-gray-500 cursor-pointer">Mô tả</div>
                 <span class="w-[93px] h-[1px] bg-black absolute bottom-[-1px]"></span>
-                <div class="cursor-pointer">ADDITIONAL INFORMATION</div>
-                <div class="cursor-pointer"> REVIEWS (0)</div>
-                <div class="cursor-pointer"> Q & A</div>
             </div>
             updating...
         </div>
         <div class="max-w-[1540px] m-auto truncate">
-            <div class="title text-[20px] font-[600] flex justify-between">You May Also Like <div class="text-[30px] text-gray-400"></div>
+            <div class="title text-[20px] font-[600] flex justify-between">Bạn có thể thích <div class="text-[30px] text-gray-400"></div>
             </div>
             <div class="product_card flex py-[1.5rem]" style="grid-gap: 20px;">
                 <?php for ($i = 0; $i <  min(5, count($productList)); $i++) { ?>
@@ -203,7 +195,7 @@
                                     <i class='bx bx-fullscreen'></i><i class='bx bxs-right-arrow'></i>
                                 </div>
 
-                                <button>Read more</button>
+                                <button>Xem thêm</button>
                             </div>
                             <p>
                                 <?php echo $productList[$i]['name']; ?>

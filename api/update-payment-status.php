@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     } else {
         ob_end_clean();
-        echo json_encode(["success" => false, "error" => "Thiếu code hoặc payment_status"]);
+        // echo json_encode(["success" => false, "error" => "Thiếu code hoặc payment_status"]);
         exit;
     }
 } else {

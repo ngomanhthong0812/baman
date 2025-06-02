@@ -25,23 +25,23 @@
         <div class="icon_prioritize">
             <div class="icon_prioritize_inner">
                 <img src="./public/img/icon_prioritize/1.png" alt="">
-                <h5>Amazing Value Every Day</h5>
-                <span>Items prices that fit your budget</span>
+                <h5>Giá trị tuyệt vời mỗi ngày</h5>
+                <span>Giá sản phẩm phù hợp với ngân sách của bạn</span>
             </div>
             <div class="icon_prioritize_inner">
                 <img src="./public/img/icon_prioritize/2.png" alt="">
-                <h5>Successful Customer Service</h5>
-                <span>We work with a focus on 100% customer satisfaction.</span>
+                <h5>Dịch vụ khách hàng thành công</h5>
+                <span>Chúng tôi tập trung vào sự hài lòng 100% của khách hàng.</span>
             </div>
             <div class="icon_prioritize_inner">
                 <img src="./public/img/icon_prioritize/3.png" alt="">
-                <h5>All Payment Methods</h5>
-                <span>Don't bother with payment details.</span>
+                <h5>Tất cả phương thức thanh toán</h5>
+                <span>Không cần lo lắng về chi tiết thanh toán.</span>
             </div>
             <div class="icon_prioritize_inner flex-col items-center">
                 <img src="./public/img/icon_prioritize/4.png" alt="">
-                <h5>Completely free shipping</h5>
-                <span>We'll handle the shipping.</span>
+                <h5>Miễn phí vận chuyển hoàn toàn</h5>
+                <span>Chúng tôi sẽ lo phần vận chuyển.</span>
             </div>
         </div>
 
@@ -61,7 +61,7 @@
                             <div class="icon">
                                 <i class='bx bx-fullscreen'></i><i class='bx bxs-right-arrow'></i>
                             </div>
-                            <button>Read more</button>
+                            <button>Xem thêm</button>
                         </div>
                         <p>
                             <?php echo $productList[$i]['name']; ?>
@@ -80,11 +80,18 @@
 
         <div class="container_sale">
             <div class="sale">
-                <div class="sale_1"><span>Super discount for your first purchase</span><span>FIRST250</span><span>Use
-                        discount code in checkout page.</span></div>
-                <div class="sale_2"><span>2nd shopping surprise campaign!</span><button>Check Products <i class='bx bx-skip-next'></i></button></div>
+                <div class="sale_1">
+                    <span>Giảm giá siêu hấp dẫn cho lần mua đầu tiên của bạn</span>
+                    <span>FIRST250</span>
+                    <span>Sử dụng mã giảm giá ở trang thanh toán.</span>
+                </div>
+                <div class="sale_2">
+                    <span>Chiến dịch ưu đãi bất ngờ lần mua thứ 2!</span>
+                    <button>Kiểm tra sản phẩm <i class='bx bx-skip-next'></i></button>
+                </div>
             </div>
         </div>
+
 
         <div class="product pb-10">
             <div class="banner_2 w-80 d-flex flex-col gap-2">
@@ -102,7 +109,7 @@
                             <div class="icon">
                                 <i class='bx bx-fullscreen'></i><i class='bx bxs-right-arrow'></i>
                             </div>
-                            <button>Read more</button>
+                            <button>Xem thêm</button>
                         </div>
                         <p>
                             <?php echo $productList[$i]['name']; ?>
@@ -126,12 +133,10 @@
         <img src="./public/img/product/banner_4.png" alt="">
         <div>
             <div class="featured_Deals-child--2-banner_3-1">
-                <span class="status">NEW SEASON</span>
-                <h5>Back to the past: <span>Bracelets</span></h5>
-                <div class="content">You can hide so much behind theatrics, and I don't need to do that any more. My
-                    relationships with producers or photographers - these are relationships that took years.</div>
-                <button>View all leather products<i class='bx bxs-right-arrow'></i></button>
-
+                <span class="status">CÔNG NGHỆ MỚI</span>
+                <h5>Trở về tương lai: <span>Thiết bị thông minh</span></h5>
+                <div class="content text-center">Khám phá các thiết bị công nghệ giúp nâng tầm cuộc sống hiện đại. Kết nối nhanh hơn, làm việc thông minh hơn – tất cả bắt đầu từ những lựa chọn đúng đắn hôm nay.</div>
+                <button>Xem tất cả sản phẩm công nghệ<i class='bx bxs-right-arrow'></i></button>
             </div>
         </div>
     </div>
@@ -139,8 +144,8 @@
         <div class="instagram">
             <div class="title">
                 <div class="name_shop">#BaMan</div>
-                <div>Tag <span>@bamanshop</span> in your Instagram posts for a chance to be featured here.</div>
-                <div>Find more inspiration on our <span>Instagram account.</span></div>
+                <div>Gắn thẻ <span>@bamanshop</span> trong các bài đăng Instagram của bạn để có cơ hội được giới thiệu tại đây.</div>
+                <div>Tìm thêm cảm hứng trên <span>tài khoản Instagram</span> của chúng tôi.</div>
             </div>
             <div>
                 <div><img src="./public/img/instagram/1.png" alt=""><img src="./public/img/product/icon.png" alt="">
