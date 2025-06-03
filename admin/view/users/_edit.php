@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Dashboard - SB Admin</title>
+    <title>Tổng quan - SB Admin</title>
     <link rel="shortcut icon" href="../../public/img/logo/123.png" type="image/x-icon">
     <link href="../../public/admin/css/style.css" rel="stylesheet" />
     <script src="../../public/admin/js/all.js" crossorigin="anonymous"></script>
@@ -20,9 +20,9 @@
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4">
-                    <h1 class="mt-4">Dashboard</h1>
+                    <h1 class="mt-4">Tổng quan</h1>
                     <ol class="breadcrumb mb-4">
-                        <li class="breadcrumb-item active">Dashboard</li>
+                        <li class="breadcrumb-item active">Tổng quan</li>
                     </ol>
                     <div class="card mb-4">
                         <div class="card-header">
@@ -33,26 +33,29 @@
                             <form action="edit.php" method="post">
                                 <input type="hidden" name="id" value="<?php echo $user['id']; ?>" />
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Name</label>
+                                    <label for="exampleInputEmail1">Tên</label>
                                     <input type="text" name="name" value="<?php echo $user['name']; ?>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Phone</label>
-                                    <input type="text" name="phone" value="<?php echo $user['phone']; ?>"  class="form-control" id="exampleInputPassword1" placeholder="">
+                                    <label for="exampleInputPassword1">Số điện thoại</label>
+                                    <input type="text" name="phone" value="<?php echo $user['phone']; ?>" class="form-control" id="exampleInputPassword1" placeholder="">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Email</label>
-                                    <input type="text" name="email" value="<?php echo $user['email']; ?>"  class="form-control" id="exampleInputPassword1" placeholder="">
+                                    <input type="text" name="email" value="<?php echo $user['email']; ?>" class="form-control" id="exampleInputPassword1" placeholder="">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Password</label>
-                                    <input type="text" name="password" value="<?php echo $user['password']; ?>"  class="form-control" id="exampleInputPassword1" placeholder="">
+                                    <label for="exampleInputPassword1">Số điện thoại</label>
+                                    <input type="text" name="password" value="<?php echo $user['password']; ?>" class="form-control" id="exampleInputPassword1" placeholder="">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Role</label>
-                                    <input type="text" name="role" value="<?php echo $user['role']; ?>"  class="form-control" id="exampleInputPassword1" placeholder="">
+                                    <label for="roleSelect">Phân quyền</label>
+                                    <select name="role" class="form-control" id="roleSelect">
+                                        <option value="user" <?php echo ($user['role'] === 'user') ? 'selected' : ''; ?>>User</option>
+                                        <option value="admin" <?php echo ($user['role'] === 'admin') ? 'selected' : ''; ?>>Admin</option>
+                                    </select>
                                 </div>
-                                <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Submit</button>
+                                <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Câph nhật</button>
                             </form>
                         </div>
                     </div>

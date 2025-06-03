@@ -1,59 +1,66 @@
 <div class="container_contact">
     <div class="contact">
         <div class="contact_1">
-            <div>CUSTOMER SERVICES</div>
+            <div>HỖ TRỢ KHÁCH HÀNG</div>
             <div class="phone">(+84) 112-13-114</div>
-            <div>Monday – Friday: 9:00 - 20:00</div>
+            <div>Thứ 2 – Thứ 6: 9:00 - 20:00</div>
         </div>
         <div class="contact_2">
-            <div>NEWSLETTER</div>
-            <div class="email"><input type="text" placeholder="Your Email"><button>Submit</button></div>
-            <div>Sign up to get the latest on new Products, Promotions, Design news and more</div>
+            <div>NHẬN BẢN TIN</div>
+            <div class="email">
+                <input type="text" placeholder="Email của bạn">
+                <button>Gửi</button>
+            </div>
+            <div>Đăng ký để nhận thông tin khuyến mãi, sản phẩm mới và công nghệ mới nhất</div>
         </div>
     </div>
 </div>
+
 <footer>
     <div class="footer">
         <div class="container_footer">
 
             <div class="footer-section">
-                <h6 class="footer-heading">About Wooma</h6>
+                <h6 class="footer-heading">Về TechStore</h6>
                 <ul class="footer-list">
-                    <li><a href="">Wooma Inside</a></li>
-                    <li><a href="">About Us</a></li>
-                    <li><a href="">Company</a></li>
-                    <li><a href="">Careers</a></li>
-                    <li><a href="">Brands</a></li>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Tin công nghệ</a></li>
+                    <li><a href="#">Đối tác</a></li>
+                    <li><a href="#">Tuyển dụng</a></li>
+                    <li><a href="#">Liên hệ</a></li>
                 </ul>
             </div>
+
             <div class="footer-section">
-                <h6 class="footer-heading">Categories</h6>
+                <h6 class="footer-heading">Sản phẩm</h6>
                 <ul class="footer-list">
-                    <li><a href="">Rings</a></li>
-                    <li><a href="">Accessories</a></li>
-                    <li><a href="">Earrings</a></li>
-                    <li><a href="">Gold Buckle</a></li>
-                    <li><a href="">Bracelets</a></li>
+                    <li><a href="#">Laptop</a></li>
+                    <li><a href="#">Điện thoại</a></li>
+                    <li><a href="#">Tai nghe</a></li>
+                    <li><a href="#">Bàn phím & Chuột</a></li>
+                    <li><a href="#">Phụ kiện</a></li>
                 </ul>
             </div>
+
             <div class="footer-section">
-                <h6 class="footer-heading">Campaigns</h6>
+                <h6 class="footer-heading">Chương trình</h6>
                 <ul class="footer-list">
-                    <li><a href="">Winter Shoes</a></li>
-                    <li><a href="">Women T-shirts</a></li>
-                    <li><a href="">%50 Sales</a></li>
-                    <li><a href="">Outlet</a></li>
-                    <li><a href="">Pre-Sale</a></li>
+                    <li><a href="#">Flash Sale</a></li>
+                    <li><a href="#">Giảm giá 50%</a></li>
+                    <li><a href="#">Trả góp 0%</a></li>
+                    <li><a href="#">Ưu đãi thành viên</a></li>
+                    <li><a href="#">Quà tặng công nghệ</a></li>
                 </ul>
             </div>
+
             <div class="footer-section">
-                <h6 class="footer-heading">Help</h6>
+                <h6 class="footer-heading">Hỗ trợ</h6>
                 <ul class="footer-list">
-                    <li><a href="">Order Tracking</a></li>
-                    <li><a href="">Terms & Conditions</a></li>
-                    <li><a href="">Privacy Policy</a></li>
-                    <li><a href="">Tutorials</a></li>
-                    <li><a href="">FAQ</a></li>
+                    <li><a href="#">Hướng dẫn mua hàng</a></li>
+                    <li><a href="#">Chính sách bảo hành</a></li>
+                    <li><a href="#">Điều khoản sử dụng</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Câu hỏi thường gặp</a></li>
                 </ul>
             </div>
 
@@ -96,22 +103,8 @@
 
         </div>
     </div>
-    <div class="container_footer_2">
-        <div class="footer-2">
-            <div class="contact-info">
-                <ul>
-                    <li><a href="mailto:hello@demogoldsmith.com">HELLO@DEMOBAMAN.COM</a></li>
-                </ul>
-            </div>
-            <div class="payment-method">
-
-            </div>
-            <div class="copyright">
-                <p>&copy; BAMAN.com</p>
-            </div>
-        </div>
-    </div>
 </footer>
+
 
 <div class="my_home_click">
     <button ondblclick="top_button()"><i class='bx bx-chevron-up'></i></button>

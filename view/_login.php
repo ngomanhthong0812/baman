@@ -18,9 +18,9 @@
     <div class="w-[100%] my_login">
         <div class="max-w-[1540px] px-[1rem] m-auto flex flex-col justify-center bg-[#f5f5f5]">
             <ul class="flex gap-[5px] text-[12px] text-gray-300 leading-8 w-[100px] m-auto">
-                <li class="text-black"><a href="./public/home.php">HOME</a></li>
+                <li class="text-black"><a href="./public/home.php" class="text-nowrap">TRANG CHỦ</a></li>
                 &#8226;
-                <li class="text-black"><a href="./public/login.php">LOGIN</a></li>
+                <li class="text-black"><a href="./public/login.php" class="text-nowrap">ĐĂNG NHẬP</a></li>
             </ul>
         </div>
     </div>
@@ -28,16 +28,16 @@
         <div class="form_dang_nhap">
             <div class="form_dang_nhap_2">
                 <form class="border text-[13px]" action="login.php" method="post">
-                    <h2>Login</h2>
+                    <h2>Đăng nhập</h2>
                     <div class="leading-6">
-                        <p>If you don't have an account,</p><a href="register.php" class="dang_ki font-[550]">Register here</a>
+                        <p>Nếu bạn chưa có tài khoản,</p><a href="register.php" class="dang_ki font-[550]">Đăng kí ngay</a>
                     </div>
-                    <input type="email" id="email" name="email" value="<?php echo $arrUser['email']?>" placeholder="Email" required>
-                    <input type="password" id="password" name="password" value="<?php echo $arrUser['password']?>" placeholder="Password" required>
-                    <span class="absolute ml-[5px] text-[red] text-[10px] "><?php echo $arrUser['notificationPasswordEmail']?></span>
-                    <input type="submit" value="Login" name="login">
-                    <div class="quen_mat_khau"><a href="#">Forgot password</a></div>
-                    <div class="or">Or log in with</div>
+                    <input type="email" id="email" name="email" value="<?php echo $arrUser['email'] ?>" placeholder="Email" required>
+                    <input type="password" id="password" name="password" value="<?php echo $arrUser['password'] ?>" placeholder="Password" required>
+                    <span class="absolute ml-[5px] text-[red] text-[10px] "><?php echo $arrUser['notificationPasswordEmail'] ?></span>
+                    <input type="submit" value="Đăng nhập" name="login">
+                    <div class="quen_mat_khau"><a href="#">Quên mật khẩu</a></div>
+                    <div class="or">Hoặc đăng nhập với</div>
                     <div class="social-login">
                         <a href="https://m.facebook.com/login/?locale=vi_VN&refsrc=deprecated" class="facebook">Facebook</a>
                         <a href="https://accounts.google.com/InteractiveLogin/signinchooser?hl=vi&ifkv=Af_xneFlvO-Khlwmzix0y_WZYDCnbN7JQeJew3wxMMf6Y3YVcfnxQd6L03o9Kaa9ll-jMFdcjvPnmg&flowName=GlifWebSignIn&flowEntry=ServiceLogin" class="google">Google</a>

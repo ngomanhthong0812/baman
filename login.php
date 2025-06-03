@@ -16,6 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($user) {
                 if ($user['password'] == $password) {
                     $_SESSION['email'] = $email;
+                    $_SESSION['user_id'] = $user['id'];
                     $_SESSION['password'] = $password;
                     $_SESSION['role'] = $user['role'];
                     $is_login = true;

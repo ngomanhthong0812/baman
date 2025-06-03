@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-        <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" href="./public/css/style.css">
     <title>Goldsmith &#8211; Modern WooCommerce Theme</title>
     <link rel="shortcut icon" href="./public/img/logo/123.png" type="image/x-icon">
     <link href='https://fonts.googleapis.com/css?family=Jost' rel='stylesheet'>
@@ -19,27 +19,27 @@
     <div class="my_body">
         <div class="max-w-[1540px] m-auto text-[15px] pb-[5rem]">
             <div class="container_categories flex justify-between py-[2rem]">
-                <h1 class="text-[26px] font-[510]">Your Shopping Bag</h1><a href="category.php"
-                    class="bg-[#dadada] text-[15px] text-black font-[410] py-2 px-3">Continue Shopping</a>
+                <h1 class="text-[26px] font-[510]">Giỏ hàng của bạn</h1><a href="category.php"
+                    class="bg-[#dadada] text-[15px] text-black font-[410] py-2 px-3">Tiếp tục mua sắm</a>
             </div>
             <div class="flex border-[#c9c9c9] text-[#414141] border-b-[2px] py-[0.5rem]">
                 <div class="w-[30%]">Item</div>
                 <div class="w-[70%] flex">
-                    <span class="w-[20%] flex justify-center">Shipped from</span>
-                    <span class="w-[20%] flex justify-center">Attributes</span>
-                    <span class="w-[20%] flex justify-center">Quantity</span>
-                    <span class="w-[20%] flex justify-center">Price</span>
-                    <span class="w-[20%] flex justify-center">Total</span>
+                    <span class="w-[20%] flex justify-center">Gửi từ</span>
+                    <span class="w-[20%] flex justify-center">Thuộc tính</span>
+                    <span class="w-[20%] flex justify-center">Số lượng</span>
+                    <span class="w-[20%] flex justify-center">Đơn giá</span>
+                    <span class="w-[20%] flex justify-center">Tổng</span>
                 </div>
             </div>
-            <?php $quantity = 0?>
+            <?php $quantity = 0 ?>
             <div class="product_cart">
                 <div class="notification w-[100%] flex items-center justify-center p-[0.5rem] font-black"></div>
                 <?php if (isset($_SESSION['cart'])) { ?>
                     <?php foreach ($_SESSION['cart'] as $orderItems) { ?>
                         <div class="my_cart flex border-indigo-[#f5f5f5] text-[#929292] border-b-2 py-[1.5rem]">
                             <div class="w-[30%] flex gap-[8px]">
-                                <img src="./public/img/product/<?php echo $orderItems["productImage"] ?>.png" alt=""
+                                <img src="<?php echo $orderItems["productImage"] ?>" alt=""
                                     class="w-[110px]">
                                 <span class="text-[15px] flex flex-col justify-center items-start">
                                     <div class="text-black text-[18px] font-[500]">
@@ -51,7 +51,7 @@
                                     <form action="cart.php" method="post">
                                         <input type="hidden" name="_method" value="delete">
                                         <input type="hidden" name="idRemove" value="<?php echo $orderItems["productId"] ?>">
-                                        <button class="hover:text-black">Remove</button>
+                                        <button class="hover:text-black">Xoá</button>
                                     </form>
                                 </span>
                             </div>
@@ -62,18 +62,18 @@
                                 <span class="gap-[5px] w-[20%] flex justify-center items-center">
                                     <input type="hidden" name="_method" value="update">
                                     <input type="hidden" name="idQuantityNumber" value="<?php echo $orderItems["productId"] ?>">
-                                    <input type="number" name="quantityNumber" class="w-[35px] pl-[5px] border border-black rounded-[3px]" value="<?php echo $orderItems['quantity']?>"></input>
-                                    <button class="bg-black text-[11px] p-[0.3rem] h-[100%] text-white px-[1rem] flex justify-center items-center hover:opacity-[0.8]">Update</button>
+                                    <input type="number" name="quantityNumber" class="w-[35px] pl-[5px] border border-black rounded-[3px]" value="<?php echo $orderItems['quantity'] ?>"></input>
+                                    <button class="bg-black text-[11px] p-[0.3rem] h-[100%] text-white px-[1rem] flex justify-center items-center hover:opacity-[0.8]">Cập nhật</button>
                                 </span>
                                 <span class="w-[20%] flex flex-col justify-center items-center">
-                                    <div class="text-black">$
-                                        <?php echo $orderItems['productPrice'] ?>.00
+                                    <div class="text-black">
+                                        <?php echo number_format($orderItems['productPrice'], 0, ',', '.'); ?> vnđ
                                     </div>
                                 </span>
-                                <span class="w-[20%] flex justify-center items-center text-black ">$
+                                <span class="w-[20%] flex justify-center items-center text-black ">
                                     <span class="productTotal">
-                                        <?php echo $orderItems['productPrice'] * $orderItems['quantity'] ?>
-                                    </span>.00
+                                        <?php echo number_format($orderItems['productPrice'] * $orderItems['quantity'], 0, ',', '.'); ?> vnđ
+                                    </span>
                                 </span>
                             </form>
                         </div>
@@ -87,28 +87,28 @@
                     </div>
                 </div>
                 <div class="w-[250px]">
-                    <div class="w-[100%] flex justify-between">Subtotal: <span class="text-black font-[450]">$<span
-                                class="subtotal">0</span>.00</span></div>
-                    <div class="w-[100%] flex justify-between leading-[40px]">Est, shipping: <span
-                            class="text-black font-[450]">$<span class="shippingTotal">0</span>.00</span></div>
-                    <div class="w-[100%] flex justify-between ">Total: <span
-                            class="text-[20px] font-[500] text-[#000000]">$<span class="total">0</span>.00</span></div>
+                    <div class="w-[100%] flex justify-between">
+                        Tạm tính: <span class="text-black font-[450]"><span class="subtotal"></span> đ</span>
+                    </div>
+                    <div class="w-[100%] flex justify-between leading-[40px]">
+                        Phí vận chuyển (ước tính): <span class="text-black font-[450]"><span class="shippingTotal"></span> đ</span>
+                    </div>
+                    <div class="w-[100%] flex justify-between">
+                        Tổng cộng: <span class="text-[20px] font-[500] text-[#000000]"><span class="total"></span> đ</span>
+                    </div>
                 </div>
             </div>
             <div class="flex justify-between gap-[10px]">
-                <a href="category.php" class="bg-[#dadada] text-[15px] text-black font-[410] py-2 px-3">Continue
-                    Shopping</a>
-                <form action="cart.php" method="post" class="w-[70%] flex justify-end">
+                <a href="category.php" class="bg-[#dadada] text-[15px] text-black font-[410] py-2 px-3">Tiếp tục mua hàng</a>
+                <form action="cart.php" method="post" class="w-[72%] flex justify-end">
                     <input type="hidden" name="_method" value="removeAll">
                     <button
-                        class="bg-black text-[15px] w-[150px] h-[100%] text-white px-[1rem] flex justify-center items-center hover:opacity-[0.8]"><i class='bx bx-trash' ></i>&nbsp Remove All</button>
+                        class="bg-black text-[15px] w-[150px] h-[100%] text-white px-[1rem] flex justify-center items-center hover:opacity-[0.8]"><i class='bx bx-trash'></i>&nbsp Xoá tất cả</button>
                 </form>
                 <a href="checkout.php"
-                    class="bg-black text-[15px] text-white px-[2.5rem] flex justify-center items-center hover:opacity-[0.8]"><i
-                        class='bx bx-lock-alt'></i>&nbsp &nbsp Secure Checkout</a>
+                    class="bg-black text-[15px] text-white px-[2.5rem] flex justify-center items-center hover:opacity-[0.8]">
+                    <i class='bx bx-lock-alt'></i>&nbsp;&nbsp;Thanh toán</a>
             </div>
-
-
         </div>
     </div>
 
@@ -123,7 +123,7 @@
         var menu = document.querySelector(".container_menu");
         var myBody = document.querySelector(".container_categories");
 
-        window.addEventListener("scroll", function () {
+        window.addEventListener("scroll", function() {
             // Kiểm tra vị trí cuộn
             var scrollPosition = window.scrollY || document.documentElement.scrollTop;
 

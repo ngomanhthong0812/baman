@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'users_id' => $_POST['users_id'],
         "address" => $_POST["address"],
         "phone" => $_POST["phone"],
-        "date" => $_POST["date"],
+        "payment_status" => $_POST["payment_status"],
     );
     insert_order($createOrder);
 

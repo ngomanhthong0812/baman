@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Dashboard - SB Admin</title>
+    <title>Tổng quan - SB Admin</title>
     <link rel="shortcut icon" href="../../public/img/logo/123.png" type="image/x-icon">
     <link href="../../public/admin/css/style.css" rel="stylesheet" />
     <script src="../../public/admin/js/all.js" crossorigin="anonymous"></script>
@@ -27,9 +27,9 @@
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4">
-                    <h1 class="mt-4">Dashboard</h1>
+                    <h1 class="mt-4">Tổng quan</h1>
                     <ol class="breadcrumb mb-4">
-                        <li class="breadcrumb-item active">Dashboard</li>
+                        <li class="breadcrumb-item active">Tổng quan</li>
                     </ol>
                     <div class="card mb-4">
                         <div class="card-header">
@@ -39,27 +39,27 @@
                         <div class="card-body">
                             <form action="create.php" method="post">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Name</label>
+                                    <label for="exampleInputEmail1">Tên</label>
                                     <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Image</label>
+                                    <label for="exampleInputPassword1">Đường dẫn ảnh</label>
                                     <input type="text" name="image" class="form-control" id="exampleInputPassword1" placeholder="">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Description</label>
-                                    <textarea id="myTextarea" type="text" name="description" value="" class="form-control" id="exampleInputPassword1" ></textarea>
+                                    <label for="exampleInputPassword1">Mô tả</label>
+                                    <textarea id="myTextarea" type="text" name="description" value="" class="form-control" id="exampleInputPassword1"></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Price</label>
+                                    <label for="exampleInputPassword1">Giá</label>
                                     <input type="text" name="price" class="form-control" id="exampleInputPassword1" placeholder="">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Quantity</label>
+                                    <label for="exampleInputPassword1">Số lượng</label>
                                     <input type="text" name="quantity" class="form-control" id="exampleInputPassword1" placeholder="">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Category</label>
+                                    <label for="exampleInputPassword1">Loại</label>
                                     <select class="form-control" name="category_id">
                                         <?php foreach ($nameCategory as $name) { ?>
                                             <option value="<?php echo $name['name'] ?>"><?php echo $name['name'] ?></option>
@@ -67,7 +67,7 @@
                                     </select>
                                 </div>
 
-                                <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Submit</button>
+                                <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Thêm</button>
                             </form>
                         </div>
                     </div>

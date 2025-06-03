@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-define('BASE_URL', 'http://localhost/baman');
+define('BASE_URL', 'http://localhost/baman-v2');
 
 // require_once 'auth.php';
 require_once 'db_product.php';

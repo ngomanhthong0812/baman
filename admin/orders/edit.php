@@ -3,7 +3,7 @@ require_once '../../core/db/boot.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user = get_all_user();
-    foreach( $user as $id){
+    foreach ($user as $id) {
         if ($id['name'] == $_POST["users_id"]) {
             $_POST["users_id"] = $id['id'];
             break;
@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         "users_id" => $_POST['users_id'],
         "address" => $_POST["address"],
         "phone" => $_POST["phone"],
-        "date" => $_POST["date"],
+        "payment_status" => $_POST["payment_status"],
     );
 
     update_order($updateOrder);

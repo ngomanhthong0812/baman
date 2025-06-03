@@ -18,45 +18,69 @@
     <div class="w-[100%] my_login">
         <div class="px-[1rem] m-auto flex flex-col justify-center bg-[#f5f5f5]">
             <ul class="flex gap-[5px] text-[12px] text-gray-300 leading-8 w-[100px] m-auto">
-                <li class="text-black"><a href="index.php">HOME</a></li>
+                <li class="text-black"><a href="index.php" class="text-nowrap">TRANG CHỦ</a></li>
                 &#8226;
-                <li class="text-black"><a href="#">CHECKOUT</a></li>
+                <li class="text-black"><a href="#" class="text-nowrap">THANH TOÁN</a></li>
             </ul>
         </div>
     </div>
     <div class="my_body">
         <div class="max-w-[1540px] m-auto pt-[1rem] text-[15px] pb-[5rem]">
-            <div class="w-[330px] border p-[0.5rem] flex items-center justify-center bg-[#f5f5f5] text-[14px]">Thank you. Your
-                order has been recevied.</div>
+            <div class="w-[330px] border p-[0.5rem] flex items-center justify-center bg-[#f5f5f5] text-[14px]">Cảm ơn bạn. Đơn hàng của bạn đã được tiếp nhận.</div>
             <div class="w-[800px] border-sloid border-2 py-2 px-1 flex items-center mt-[2rem]">
                 <div class="flex items-center justify-center">
-                    <span class="border-dashed border-r p-2">Order number: <p><?php echo $_SESSION['code'] ;?></p></span>
-                    <span class="border-dashed border-r p-2">Date: <p class="flex-nowrap"><?php echo $_SESSION['date']?></p></span>
-                    <span class="border-dashed border-r p-2">Total: <p>$<?php echo $_SESSION['total'] ;?>.00</p></span>
-                    <span class="px-3 p-2">Payment method: <p class="flex-nowrap">Direct bank transfer</p></span>
+                    <span class="border-dashed border-r p-2">Mã giao dịch: <p id="code" data-value='<?php echo $_SESSION['code']; ?>'><?php echo $_SESSION['code']; ?></p></span>
+                    <span class="border-dashed border-r p-2">Ngày: <p class="flex-nowrap"><?php echo $_SESSION['date'] ?></p></span>
+                    <span class="border-dashed border-r p-2">Thanh toán: <p id="total" data-value='<?php echo $_SESSION['total']; ?>'> <?php echo number_format($_SESSION['total'], 0, ',', '.'); ?> vnđ</p></span>
+                    <span class="px-3 p-2">Hình thức thanh toán: <p class="flex-nowrap" id="payment_method" data-value="<?php echo $_SESSION['payment_method'] ?>"><?php echo $_SESSION['payment_method'] === 'cod' ? 'Cash on Delivery' : 'Online' ?></p></span>
                 </div>
             </div>
-            <div class="text-[20px] font-[500] mt-[1rem]">Our bank details</div>
-            <span class="font-[500]">Nine</span>
-            <div class="mt-[0.6rem]">
-                <div class="flex text-[14px]">&#8226;&nbsp;Bank: <p>&nbsp;Mb Bank</p>
+
+            <?php if (isset($_SESSION['payment_method']) && $_SESSION['payment_method'] === 'online'): ?>
+                <div class="p-4 bg-white rounded shadow-md max-w-md mx-auto mt-10">
+                    <div class="mt-4">
+                        <div class="text-lg font-semibold mb-2">Mã QR Thanh Toán:</div>
+                        <p class="text-red-400">Vui lòng không thay đổi nội dung chuyển khoản.</p>
+                        <img
+                            id="qrCode"
+                            src=""
+                            alt="QR Code"
+                            class="rounded-md mx-auto p-2" />
+                    </div>
+
+                    <div class="mt-8">
+                        <div class="text-2xl font-semibold mb-4">Chỉ tiết tài khoản</div>
+
+                        <div class="space-y-2 text-gray-700 text-sm">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-xl text-gray-400">&#8226;</span>
+                                <span class="font-medium">Bank:</span>
+                                <span id="bankName" class="ml-1">Mb Bank</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="text-xl text-gray-400">&#8226;</span>
+                                <span class="font-medium">Số tài khoản:</span>
+                                <span id="accountNo" class="ml-1">1025693979</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="text-xl text-gray-400">&#8226;</span>
+                                <span class="font-medium">Số tiền chuyển khoản:</span>
+                                <span class="ml-1"><?php echo number_format($_SESSION['total'], 0, ',', '.'); ?> vnđ</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex text-[14px]">&#8226;&nbsp;Account number: <p>&nbsp;DEMO0123456789</p>
-                </div>
-                <div class="flex text-[14px]">&#8226;&nbsp;Sort code: <p>&nbsp;67589</p>
-                </div>
-                <div class="flex text-[14px]">&#8226;&nbsp;IBANK: <p>&nbsp;DEMO0123456789</p>
-                </div>
-                <div class="flex text-[14px]">&#8226;&nbsp;BIC: <p>&nbsp;DD3435</p>
-                </div>
-            </div>
+            <?php endif; ?>
         </div>
     </div>
+
+    <div></div>
 
 
     <?php include './view/inc/_footer.php' ?>
 
     <script src="./public/js/product_detail.js"></script>
+    <script src="./public/js/payment.js"></script>
     <script>
         var menu = document.querySelector(".container_menu");
         var myBody = document.querySelector(".my_login");

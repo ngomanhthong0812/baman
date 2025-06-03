@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Dashboard - SB Admin</title>
+    <title>Tổng quan - SB Admin</title>
     <link rel="shortcut icon" href="../../public/img/logo/123.png" type="image/x-icon">
     <link href="../../public/admin/css/style.css" rel="stylesheet" />
     <script src="../../public/admin/js/all.js" crossorigin="anonymous"></script>
@@ -22,9 +22,9 @@
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4">
-                    <h1 class="mt-4">Dashboard</h1>
+                    <h1 class="mt-4">Tổng quan</h1>
                     <ol class="breadcrumb mb-4">
-                        <li class="breadcrumb-item active">Dashboard</li>
+                        <li class="breadcrumb-item active">Tổng quan</li>
                     </ol>
                     <div class="card mb-4">
                         <div class="card-header">
@@ -35,15 +35,20 @@
                             <form action="create.php" method="post">
                                 <input type="hidden" name="id" />
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Code</label>
+                                    <label for="exampleInputEmail1">Mã</label>
                                     <input type="text" name="code" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Status</label>
-                                    <input type="text" name="status" class="form-control" id="exampleInputPassword1" placeholder="">
+                                    <label for="status">Trạng thái</label>
+                                    <select name="status" class="form-control" id="status">
+                                        <option value="pending">Chờ xử lý</option>
+                                        <option value="processing">Đang xử lý</option>
+                                        <option value="completed">Đã hoàn tất</option>
+                                        <option value="cancelled">Đã hủy</option>
+                                    </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Users</label>
+                                    <label for="exampleInputPassword1">Người dùng</label>
                                     <select class="form-control" name="users_id">
                                         <?php foreach ($userName as $user) { ?>
                                             <option value="<?php echo $user['name'] ?>"><?php echo $user['name'] ?></option>
@@ -51,18 +56,24 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Address</label>
+                                    <label for="exampleInputPassword1">Địa chỉ</label>
                                     <input type="text" name="address" class="form-control" id="exampleInputPassword1" placeholder="">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Phone</label>
+                                    <label for="exampleInputPassword1">Số điện thoại</label>
                                     <input type="text" name="phone" class="form-control" id="exampleInputPassword1" placeholder="">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">date</label>
-                                    <input type="text" name="date" class="form-control" id="exampleInputPassword1" placeholder="">
+                                    <label for="payment_status">Trạng thái thanh toán</label>
+                                    <select name="payment_status" class="form-control" id="payment_status">
+                                        <option value="unpaid">Chưa thanh toán</option>
+                                        <option value="pending">Đang chờ xử lý</option>
+                                        <option value="paid">Đã thanh toán</option>
+                                        <option value="refunded">Đã hoàn tiền</option>
+                                        <option value="failed">Thanh toán thất bại</option>
+                                    </select>
                                 </div>
-                                <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Submit</button>
+                                <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Thêm</button>
                             </form>
                         </div>
                     </div>

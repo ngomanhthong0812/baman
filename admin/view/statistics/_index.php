@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Dashboard - SB Admin</title>
+    <title>Tổng quan - SB Admin</title>
     <link rel="shortcut icon" href="../../public/img/logo/123.png" type="image/x-icon">
     <link href="../../public/admin/css/style.css" rel="stylesheet" />
     <script src="../../public/admin/js/all.js" crossorigin="anonymous"></script>
@@ -22,9 +22,9 @@
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4">
-                    <h1 class="mt-4">Dashboard</h1>
+                    <h1 class="mt-4">Tổng quan</h1>
                     <ol class="breadcrumb mb-4">
-                        <li class="breadcrumb-item active">Dashboard</li>
+                        <li class="breadcrumb-item active">Tổng quan</li>
                     </ol>
                     <div class="row">
                         <div class="col-xl-3 col-md-6">
@@ -34,7 +34,7 @@
                                 <div class="text-black fw-Bolder fs-2 m-0 lh-1">
                                     <?php echo $userQuantity ?>
                                 </div>
-                                <div class="fs-10 fw-Bolder text-secondary">New User</div>
+                                <div class="fs-10 fw-Bolder text-secondary">Người dùng mới</div>
                             </div>
                         </div>
                         <div class="col-xl-3 col-md-6">
@@ -44,7 +44,7 @@
                                 <div class="text-black fw-Bolder fs-2 m-0 lh-1">
                                     <?php echo $orderQuantity ?>
                                 </div>
-                                <div class="fs-10 fw-Bolder text-secondary">New Order</div>
+                                <div class="fs-10 fw-Bolder text-secondary">Đơn hàng mới</div>
                             </div>
                         </div>
                         <div class="col-xl-3 col-md-6">
@@ -54,7 +54,7 @@
                                 <div class="text-black fw-Bolder fs-2 m-0 lh-1">
                                     <?php echo $productQuantity ?>
                                 </div>
-                                <div class="fs-10 fw-Bolder text-secondary">Inventory</div>
+                                <div class="fs-10 fw-Bolder text-secondary">Tồn kho</div>
                             </div>
                         </div>
                         <div class="col-xl-3 col-md-6">
@@ -113,7 +113,7 @@
                         <div class="col-xl-1">
                             <label for=""></label>
                             <div class="card d-flex mb-4">
-                                <button class="border-0 btnOrderDate">Search</button>
+                                <button class="border-0 btnOrderDate">Tìm kiếm</button>
                             </div>
                         </div>
                     </form>
@@ -122,30 +122,30 @@
                             <div class="card mb-4">
                                 <div class="card-header">
                                     <i class="fas fa-table me-1"></i>
-                                    Order statistics
+                                    Thống kê đặt hàng
                                 </div>
                                 <div class="card-body">
                                     <table id="datatablesSimple">
                                         <thead>
                                             <tr>
                                                 <th>STT</th>
-                                                <th>Code</th>
-                                                <th>Status</th>
-                                                <th>User</th>
-                                                <th>Address</th>
-                                                <th>Phone</th>
-                                                <th>Date</th>
+                                                <th>Mã đơn</th>
+                                                <th>Trạng thái</th>
+                                                <th>Người dùng</th>
+                                                <th>Địa chỉ</th>
+                                                <th>Số điện thoại</th>
+                                                <th>Ngày đặt</th>
                                             </tr>
                                         </thead>
                                         <tfoot>
                                             <tr>
                                                 <th>STT</th>
-                                                <th>Code</th>
-                                                <th>Status</th>
-                                                <th>User</th>
-                                                <th>Address</th>
-                                                <th>Phone</th>
-                                                <th>Date</th>
+                                                <th>Mã đơn</th>
+                                                <th>Trạng thái</th>
+                                                <th>Người dùng</th>
+                                                <th>Địa chỉ</th>
+                                                <th>Số điện thoại</th>
+                                                <th>Ngày đặt</th>
                                             </tr>
                                         </tfoot>
                                         <tbody>
@@ -206,7 +206,6 @@
     <script src="../../public/admin/js/simple-datatables@latest.js" crossorigin="anonymous"></script>
     <script src="../../public/admin/js/datatables-simple-demo.js"></script>
     <script>
-
         // Dữ liệu mẫu (số lượng bán theo thời gian)
         var salesData = {
             labels: ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5', 'Tháng 6', 'Tháng 7', 'Tháng 8', 'Tháng 9', 'Tháng 10', 'Tháng 11', 'Tháng 12'],

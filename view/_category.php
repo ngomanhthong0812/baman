@@ -19,12 +19,11 @@
 <body>
     <?php include './view/inc/_header.php' ?>
     <div class="relative w-[100%] h-[128px] bg-[#f5f5f5] container_categories">
-        <img src="./public/img/banner/1920-1.png" alt="" class="h-[100%] w-[100%] object-cover">
         <div class="w-[100%] h-[100%] max-w-[1540px] px-[1rem] flex flex-col justify-center absolute top-0 left-[50%] translate-x-[-50%]">
             <ul class="flex gap-[5px] text-[12px] text-gray-300 leading-8">
-                <li class="text-black">HOME</li>
+                <li class="text-black">TRANG CHỦ</li>
                 &#8226;
-                <li class="text-black">SHOP</li>
+                <li class="text-black">CỬA HÀNG</li>
             </ul>
             <ul class="text-[26px] font-[510]">
                 <li>Shop</li>
@@ -35,20 +34,9 @@
     <div class="my_body py-[3rem]">
         <div class="max-w-[1540px] m-auto flex">
             <div class="w-[25%] pr-[2.3rem]">
-                <div>
-                    <span class="flex justify-between items-center text-[15px] font-[500]">
-                        <p>Filter By</p><button class="w-[20px] h-[20px] rounded-full bg-[#f5f5f5] text-[16px] flex items-center justify-center font-bold">-</button>
-                    </span>
-                    <span class="flex justify-between items-center text-[12px] font-[400] mt-[1rem]">
-                        <p class="text-[#7d7d7d] cursor-pointer">Pattern #1</p><button class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center">2</button>
-                    </span>
-                    <span class="flex justify-between items-center text-[12px] font-[400]">
-                        <p class="text-[#7d7d7d] cursor-pointer">Pattern #2</p><button class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center">2</button>
-                    </span>
-                </div>
                 <div class="mt-[2rem]">
                     <span class="flex justify-between items-center text-[15px] font-[500]">
-                        <p>Filter By Price</p><button class="w-[20px] h-[20px] rounded-full bg-[#f5f5f5] text-[16px] flex items-center justify-center font-bold">-</button>
+                        <p>Lọc theo giá</p><button class="w-[20px] h-[20px] rounded-full bg-[#f5f5f5] text-[16px] flex items-center justify-center font-bold">-</button>
                     </span>
                     <!-- <input type="range" class="w-[100%] mt-[1rem]"> -->
                     <div id="slider" class="w-[100%] mt-[1rem]"></div>
@@ -56,7 +44,7 @@
                         <button class="bg-black text-white py-[0.4rem] px-3">FILTER</button>
                         <input type="hidden" name="minPrice" id="minPriceData" value="">
                         <input type="hidden" name="maxPrice" id="maxPriceData" value="">
-                        <span class="flex items-center justify-center">PRICE: $<div id="minPrice"></div> - $ <div id="maxPrice"></div></span>
+                        <span class="flex items-center justify-center">PRICE:<div id="minPrice"></div> - <div id="maxPrice"></div></span>
                     </form>
 
                 </div>
@@ -66,85 +54,44 @@
                     </span>
                     <span class="flex justify-between items-center text-[12px] font-[400] mt-[1rem]">
                         <button type="black" class="btnType text-[#7d7d7d] flex items-center gap-[10px] cursor-pointer">
-                            <div class="w-[11px] h-[11px] rounded-full bg-black border"></div>Black
+                            <div class="w-[11px] h-[11px] rounded-full bg-black border"></div>Đen
                         </button>
-                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center">3</div>
+                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center"></div>
                     </span>
                     <span class="flex justify-between items-center text-[12px] font-[400] mt-[0.5rem]">
                         <button type="blue" class="btnType text-[#7d7d7d] flex items-center gap-[10px] cursor-pointer">
-                            <div class="w-[11px] h-[11px] rounded-full bg-[blue] border"></div>Blue
+                            <div class="w-[11px] h-[11px] rounded-full bg-[blue] border"></div>Xanh biển
                         </button>
-                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center">5</div>
+                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center"></div>
                     </span>
                     <span class="flex justify-between items-center text-[12px] font-[400] mt-[0.5rem]">
                         <button type="brown" class="btnType text-[#7d7d7d] flex items-center gap-[10px] cursor-pointer">
-                            <div class="w-[11px] h-[11px] rounded-full bg-[brown] border"></div>Brown
+                            <div class="w-[11px] h-[11px] rounded-full bg-[brown] border"></div>Nâu
                         </button>
-                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center">3</div>
+                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center"></div>
                     </span>
                     <span class="flex justify-between items-center text-[12px] font-[400] mt-[0.5rem]">
                         <button type="green" class="btnType text-[#7d7d7d] flex items-center gap-[10px] cursor-pointer">
-                            <div class="w-[11px] h-[11px] rounded-full bg-[green] border"></div>Green
+                            <div class="w-[11px] h-[11px] rounded-full bg-[green] border"></div>Xanh lá
                         </button>
-                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center">4</div>
+                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center"></div>
                     </span>
                     <span class="flex justify-between items-center text-[12px] font-[400] mt-[0.5rem]">
                         <button type="white" class="btnType text-[#7d7d7d] flex items-center gap-[10px] cursor-pointer">
-                            <div class="w-[11px] h-[11px] rounded-full bg-[#ffffff] border"></div>White
+                            <div class="w-[11px] h-[11px] rounded-full bg-[#ffffff] border"></div>Trắng
                         </button>
-                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center">0</div>
+                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center"></div>
                     </span>
                     <span class="flex justify-between items-center text-[12px] font-[400] mt-[0.5rem]">
                         <button type="yellow" class="btnType text-[#7d7d7d] flex items-center gap-[10px] cursor-pointer">
-                            <div class="w-[11px] h-[11px] rounded-full bg-[yellow] border"></div>Yellow
+                            <div class="w-[11px] h-[11px] rounded-full bg-[yellow] border"></div>Vàng
                         </button>
-                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center">4</div>
-                    </span>
-                </div>
-                <div class="mt-[2rem]">
-                    <span class="flex justify-between items-center text-[15px] font-[500]">
-                        <p>Filter By Sizes</p>
-                        <div class="w-[20px] h-[20px] rounded-full bg-[#f5f5f5] text-[16px] flex items-center justify-center font-bold">-</div>
-                    </span>
-                    <span class="flex justify-between items-center text-[12px] font-[400] mt-[1rem]">
-                        <button class="text-[#7d7d7d] flex items-center gap-[10px] cursor-pointer">10K</button>
-                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center">4</div>
-                    </span>
-                    <span class="flex justify-between items-center text-[12px] font-[400] mt-[0.5rem]">
-                        <button class="text-[#7d7d7d] flex items-center gap-[10px] cursor-pointer">14K</button>
-                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center">7</div>
-                    </span>
-                    <span class="flex justify-between items-center text-[12px] font-[400] mt-[0.5rem]">
-                        <button class="text-[#7d7d7d] flex items-center gap-[10px] cursor-pointer">18K</button>
-                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center">5</div>
-                    </span>
-                    <span class="flex justify-between items-center text-[12px] font-[400] mt-[0.5rem]">
-                        <button class="text-[#7d7d7d] flex items-center gap-[10px] cursor-pointer">22K</button>
-                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center">7</div>
-                    </span>
-                    <span class="flex justify-between items-center text-[12px] font-[400] mt-[0.5rem]">
-                        <button class="text-[#7d7d7d] flex items-center gap-[10px] cursor-pointer">24K</button>
-                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center">8</div>
-                    </span>
-                    <span class="flex justify-between items-center text-[12px] font-[400] mt-[0.5rem]">
-                        <button class="text-[#7d7d7d] flex items-center gap-[10px] cursor-pointer">8k</button>
-                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center">3</div>
+                        <div class="w-[20px] h-[20px] rounded-full text-[11px] flex items-center justify-center"></div>
                     </span>
                 </div>
             </div>
             <div class="w-[75%] pl-[1rem]">
-                <div class="w-[100%] h-[300px] relative bg-[#f5f5f5] cursor-pointer group truncate border rounded-[7px]">
-                    <img src="./public/img/banner/1920-3.png" alt="" class="h-[100%] w-[100%] object-cover object-top rounded-[7px] group-hover:scale-[120%] duration-200 ease-in-out">
-                    <div class="absolute w-[100%] h-[100%] top-0 text-[13px] font-[550] flex flex-col justify-center px-[1.5rem]">
-                        <div class="bg-[#dddddd] w-[120px] text-[11px] p-[0.3rem] flex justify-center leading-4 tracking-[2px]">
-                            NOSE RINGS</div>
-                        <p class="leading-10">Free Shipping On Over $50</p>
-                        <p class="font-[400] text-[#7d7d7d]">For the terms of the campain, see the description page</p>
-                        <button class="bg-black w-[180px] text-white p-3 font-[450] leading-3 mt-[80px]">See More
-                            Products</button>
-                    </div>
-                </div>
-                <nav class="py-[2.5rem]">
+                <!-- <nav class="py-[2.5rem]">
                     <ul class="flex text-[12px] font-[500] gap-[15px]">
                         <li class="flex items-center text-[14px] text-[#7d7d7d]">Fast Filters:</li>
                         <li class="flex items-center gap-[7px] border px-[1.2rem] rounded-[20px] py-[0.3rem] hover:bg-black hover:text-white duration-200 ease-in-out cursor-pointer">
@@ -168,7 +115,7 @@
                         <li class="flex items-center gap-[7px] border px-[1.2rem] rounded-[20px] py-[0.3rem] hover:bg-black hover:text-white duration-200 ease-in-out cursor-pointer">
                             SELECT PATTERN</li>
                     </ul>
-                </nav>
+                </nav> -->
                 <div class="container_title_category text-[15px] flex items-center justify-between text-[#7d7d7d]">
                     <span class="title flex items-center">Showing <?php echo isset($_GET['minPrice']) && isset($_GET['maxPrice']) ? 'all ' : 'all ' . count($productList) . '-19' ?> results <?php echo isset($_GET['minPrice']) && isset($_GET['maxPrice']) ? '&nbsp;&nbsp; 
                     <form action="category.php" method="get">
@@ -177,25 +124,6 @@
                     </form>
                     ' . $_GET['minPrice'] . " - " . $_GET['maxPrice'] : "" ?></span>
                     <div class="flex gap-[20px]">
-                        <span class="flex gap-[8px]">
-                            <span>Filter</span>
-                            <svg class="svgFilter goldsmith-svg-icon w-[22px] h-[22px] mr-[15px] cursor-pointer" height="512" viewBox="0 0 32 32" width="512" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1">
-                                <g fill="rgb(0,0,0)">
-                                    <path d="m1.917 24.75h17.333v2h-17.333z"></path>
-                                    <path d="m23.5 22.5h-2v6.5h2v-2.25h6.583v-2h-6.583z"></path>
-                                    <path d="m12.75 15h17.333v2h-17.333z"></path>
-                                    <path d="m8.5 19.25h2v-6.5h-2v2.25h-6.583v2h6.583z"></path>
-                                    <path d="m1.917 5.25h17.333v2h-17.333z"></path>
-                                    <path d="m23.5 5.25v-2.25h-2v6.5h2v-2.25h6.583v-2z"></path>
-                                </g>
-                            </svg>
-                            <span>Show</span>
-                            <button>9</button>
-                            <button>12</button>
-                            <button>18</button>
-                            <button>24</button>
-                        </span>
-
                         <div class="flex gap-[10px]">
                             <li class="val-1 active list-none cursor-pointer" onclick="filter(1)">
                                 <svg class="svgList goldsmith-svg-icon" width="22px" height="22px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor">
@@ -219,13 +147,19 @@
                                     </path>
                                 </svg>
                             </li>
-                        <form id="sortByForm" action="category.php" method="get">
-                           <select id="sortBy" name="orderBy">
-                             <option class="text-[12px]" <?php if(isset($_GET['orderBy'] )&& $_GET['orderBy'] == 'latest' || !isset($_GET['orderBy'] ) ){echo 'selected'; } ?> value="latest">Sort by latest</option>
-                             <option class="text-[12px]" <?php if(isset($_GET['orderBy'] )&& $_GET['orderBy'] == 'ascending'){echo 'selected'; } ?> value="ascending">Price sort: ascending</option>
-                             <option class="text-[12px]" <?php if(isset($_GET['orderBy'] )&& $_GET['orderBy'] == 'descending'){echo 'selected'; } ?> value="descending">Price sort: descending</option>
-                            </select>
-                        </form>
+                            <form id="sortByForm" action="category.php" method="get">
+                                <select id="sortBy" name="orderBy">
+                                    <option class="text-[12px]" <?php if (isset($_GET['orderBy']) && $_GET['orderBy'] == 'latest' || !isset($_GET['orderBy'])) {
+                                                                    echo 'selected';
+                                                                } ?> value="latest">Sort by latest</option>
+                                    <option class="text-[12px]" <?php if (isset($_GET['orderBy']) && $_GET['orderBy'] == 'ascending') {
+                                                                    echo 'selected';
+                                                                } ?> value="ascending">Price sort: ascending</option>
+                                    <option class="text-[12px]" <?php if (isset($_GET['orderBy']) && $_GET['orderBy'] == 'descending') {
+                                                                    echo 'selected';
+                                                                } ?> value="descending">Price sort: descending</option>
+                                </select>
+                            </form>
                         </div>
 
                     </div>
@@ -237,8 +171,9 @@
                             <?php if (in_array(intval($product['price']), $productPriceFilter)) { ?>
                                 <a href="detail.php?product_id=<?php echo $product['id']; ?>" type="<?php echo $product['category_name'] ?>" class="my_card w-[100%] flex gap-[20px] border p-[1.2rem] rounded-[10px] shadow-sm">
                                     <div class="image w-[300px] h-[180px] border rounded-[5px]">
-                                        <img src="./public/img/product/<?php echo $product['image']; ?>.png" alt="" class="w-[100px]">
-                                        <div class="icon"> <i class='bx bx-heart'></i><i class='bx bxs-right-arrow'></i></div>
+                                        <img src="<?php echo $product['image']; ?>" alt="">
+                                        <div class=" icon"> <i class='bx bx-heart'></i><i class='bx bxs-right-arrow'></i>
+                                        </div>
                                         <div class="icon"><i class='bx bx-refresh'></i><i class='bx bxs-right-arrow'></i></div>
                                         <div class="icon" onclick="openZoomCard('<?php echo $product['id']; ?>','<?php echo $product['image']; ?>', '<?php echo $product['name']; ?>', '<?php echo $product['price']; ?>','<?php echo $product['description']; ?>', event)">
                                             <i class='bx bx-fullscreen'></i><i class='bx bxs-right-arrow'></i>
@@ -249,8 +184,7 @@
                                             <?php echo $product['name']; ?>
                                         </p>
                                         <div class="price">
-                                            $
-                                            <?php echo $product['price']; ?>.00
+                                            <?php echo number_format($product['price'], 0, ',', '.'); ?> vnđ
                                         </div>
                                         <div class="content text-[12px] mt-[10px] truncate overflow-hidden ">
                                             <?php echo $product['description']; ?>
@@ -265,7 +199,7 @@
                                                 </b>
                                             </div>
                                         </div>
-                                        <button class="bg-black text-white text-[13px] px-[2.5rem] py-[0.4rem] mt-[10px]">Read more</button>
+                                        <button class="bg-black text-white text-[13px] px-[2.5rem] py-[0.4rem] mt-[10px]">Xem thêm</button>
                                     </div>
                                 </a>
                             <?php } ?>
@@ -279,19 +213,18 @@
                             <?php if (in_array(intval($product['price']), $productPriceFilter)) { ?>
                                 <a href="detail.php?product_id=<?php echo $product['id']; ?>" type="<?php echo $product['category_name'] ?>" class="my_card">
                                     <div class="image">
-                                        <img src="./public/img/product/<?php echo $product['image']; ?>.png" alt="">
+                                        <img src="<?php echo $product['image']; ?>" alt="">
                                         <div class="icon"> <i class='bx bx-heart'></i><i class='bx bxs-right-arrow'></i></div>
                                         <div class="icon"><i class='bx bx-refresh'></i><i class='bx bxs-right-arrow'></i></div>
                                         <div class="icon" onclick="openZoomCard('<?php echo $product['id']; ?>','<?php echo $product['image']; ?>', '<?php echo $product['name']; ?>', '<?php echo $product['price']; ?>','<?php echo $product['description']; ?>', event)">
                                             <i class='bx bx-fullscreen'></i><i class='bx bxs-right-arrow'></i>
                                         </div>
-                                        <button>Read more</button>
+                                        <button>Xem thêm</button>
                                     </div>
                                     <p>
                                         <?php echo $product['name']; ?>
                                     </p>
-                                    <div class="price">$
-                                        <?php echo $product['price']; ?>.00
+                                    <div class="price"> <?php echo number_format($product['price'], 0, ',', '.'); ?> vnđ
                                     </div>
                                 </a>
                             <?php } ?>
@@ -302,8 +235,8 @@
                 <!--  lấy số trang -->
 
 
-                
-                
+
+
                 <?php $pageNumber = intval((count($productPriceFilter) / 8) + 1); ?>
                 <div class="page flex m-[auto] w-[fit-content] p-[0.3rem] gap-[5px] rounded-[3px] bg-black items-center justify-center text-[16px]">
                     <form method="get" action="category.php">
@@ -352,7 +285,6 @@
 
             </div>
         </div>
-        <?php include './view/inc/_zoom-card.php' ?>
     </div>
 
 
