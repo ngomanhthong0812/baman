@@ -63,7 +63,7 @@
                                     <input type="hidden" name="_method" value="update">
                                     <input type="hidden" name="idQuantityNumber" value="<?php echo $orderItems["productId"] ?>">
                                     <input type="number" name="quantityNumber" class="w-[35px] pl-[5px] border border-black rounded-[3px]" value="<?php echo $orderItems['quantity'] ?>"></input>
-                                    <button class="bg-black text-[11px] p-[0.3rem] h-[100%] text-white px-[1rem] flex justify-center items-center hover:opacity-[0.8]">Update</button>
+                                    <button class="bg-black text-[11px] p-[0.3rem] h-[100%] text-white px-[1rem] flex justify-center items-center hover:opacity-[0.8]">Cập nhật</button>
                                 </span>
                                 <span class="w-[20%] flex flex-col justify-center items-center">
                                     <div class="text-black">

@@ -45,7 +45,7 @@
                                     <label for="exampleInputPassword1">Mô tả</label>
                                     <textarea id="myTextarea" type="text" name="description" class="form-control" id="exampleInputPassword1" placeholder=""><?php echo $category['description']; ?></textarea>
                                 </div>
-                                <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Submit</button>
+                                <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Cập nhật</button>
                             </form>
                         </div>
                     </div>

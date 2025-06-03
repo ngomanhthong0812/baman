@@ -73,7 +73,7 @@
                                         <option value="failed">Thanh toán thất bại</option>
                                     </select>
                                 </div>
-                                <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Submit</button>
+                                <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Thêm</button>
                             </form>
                         </div>
                     </div>

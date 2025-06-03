@@ -199,7 +199,7 @@
                                                 </b>
                                             </div>
                                         </div>
-                                        <button class="bg-black text-white text-[13px] px-[2.5rem] py-[0.4rem] mt-[10px]">Read more</button>
+                                        <button class="bg-black text-white text-[13px] px-[2.5rem] py-[0.4rem] mt-[10px]">Xem thêm</button>
                                     </div>
                                 </a>
                             <?php } ?>
@@ -219,7 +219,7 @@
                                         <div class="icon" onclick="openZoomCard('<?php echo $product['id']; ?>','<?php echo $product['image']; ?>', '<?php echo $product['name']; ?>', '<?php echo $product['price']; ?>','<?php echo $product['description']; ?>', event)">
                                             <i class='bx bx-fullscreen'></i><i class='bx bxs-right-arrow'></i>
                                         </div>
-                                        <button>Read more</button>
+                                        <button>Xem thêm</button>
                                     </div>
                                     <p>
                                         <?php echo $product['name']; ?>

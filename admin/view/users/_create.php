@@ -54,11 +54,13 @@
                                         class="form-control" id="exampleInputPassword1" placeholder="">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Phân quyền</label>
-                                    <input type="text" name="role"
-                                        class="form-control" id="exampleInputPassword1" placeholder="">
+                                    <label for="roleSelect">Phân quyền</label>
+                                    <select name="role" class="form-control" id="roleSelect">
+                                        <option value="user">User</option>
+                                        <option value="admin">Admin</option>
+                                    </select>
                                 </div>
-                                <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Submit</button>
+                                <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Thêm</button>
                             </form>
                         </div>
                     </div>

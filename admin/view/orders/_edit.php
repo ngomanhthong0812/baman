@@ -75,7 +75,7 @@
                                         <option value="failed" <?php echo ($order['payment_status'] === 'failed') ? 'selected' : ''; ?>>Thanh toán thất bại</option>
                                     </select>
                                 </div>
-                                <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Submit</button>
+                                <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Cập nhật</button>
                             </form>
                         </div>
                     </div>

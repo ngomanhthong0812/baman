@@ -49,10 +49,13 @@
                                     <input type="text" name="password" value="<?php echo $user['password']; ?>" class="form-control" id="exampleInputPassword1" placeholder="">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Phân quyền</label>
-                                    <input type="text" name="role" value="<?php echo $user['role']; ?>" class="form-control" id="exampleInputPassword1" placeholder="">
+                                    <label for="roleSelect">Phân quyền</label>
+                                    <select name="role" class="form-control" id="roleSelect">
+                                        <option value="user" <?php echo ($user['role'] === 'user') ? 'selected' : ''; ?>>User</option>
+                                        <option value="admin" <?php echo ($user['role'] === 'admin') ? 'selected' : ''; ?>>Admin</option>
+                                    </select>
                                 </div>
-                                <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Submit</button>
+                                <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Câph nhật</button>
                             </form>
                         </div>
                     </div>

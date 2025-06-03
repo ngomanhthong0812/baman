@@ -39,7 +39,7 @@
             <div class="w-[25%] pr-[2.3rem]">
                 <div class="mt-[2rem]">
                     <span class="flex justify-between items-center text-[15px] font-[500]">
-                        <p>Filter By</p><button class="w-[20px] h-[20px] rounded-full bg-[#f5f5f5] text-[16px] flex items-center justify-center font-bold">-</button>
+                        <p>Lọc theo màu</p><button class="w-[20px] h-[20px] rounded-full bg-[#f5f5f5] text-[16px] flex items-center justify-center font-bold">-</button>
                     </span>
                     <span class="flex justify-between items-center text-[12px] font-[400] mt-[1rem]">
                         <button type="black" class="btnType text-[#7d7d7d] flex items-center gap-[10px] cursor-pointer">
@@ -81,31 +81,6 @@
             </div>
             <div class="w-[75%] pl-[1rem]">
                 <div class="container_title_category text-[15px] flex items-center justify-between text-[#7d7d7d]">
-                    <span class="title flex">Showing all
-                        <?php echo count($productSearch) ?> results
-                    </span>
-                    <div class="flex gap-[20px]">
-                        <span class="flex gap-[8px]">
-                            <span>Filter</span>
-                            <svg class="svgFilter goldsmith-svg-icon w-[22px] h-[22px] mr-[15px] cursor-pointer"
-                                height="512" viewBox="0 0 32 32" width="512" xmlns="http://www.w3.org/2000/svg"
-                                data-name="Layer 1">
-                                <g fill="rgb(0,0,0)">
-                                    <path d="m1.917 24.75h17.333v2h-17.333z"></path>
-                                    <path d="m23.5 22.5h-2v6.5h2v-2.25h6.583v-2h-6.583z"></path>
-                                    <path d="m12.75 15h17.333v2h-17.333z"></path>
-                                    <path d="m8.5 19.25h2v-6.5h-2v2.25h-6.583v2h6.583z"></path>
-                                    <path d="m1.917 5.25h17.333v2h-17.333z"></path>
-                                    <path d="m23.5 5.25v-2.25h-2v6.5h2v-2.25h6.583v-2z"></path>
-                                </g>
-                            </svg>
-                            <span>Show</span>
-                            <button>9</button>
-                            <button>12</button>
-                            <button>18</button>
-                            <button>24</button>
-                        </span>
-
                         <div class="flex gap-[10px]">
                             <li class="val-1 active list-none cursor-pointer" onclick="filter(1)">
                                 <svg class="svgList goldsmith-svg-icon" width="22px" height="22px"
@@ -137,7 +112,7 @@
                                 </svg>
                             </li>
                             <li class="list-none gap-[5px] flex text-[13px] items-center ml-[10px]">
-                                Sort by latest
+                                Xắp xếp
                                 <i class='bx bx-chevron-down'></i>
                             </li>
                         </div>

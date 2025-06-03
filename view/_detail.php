@@ -178,7 +178,7 @@
                 <div class="text-gray-500 cursor-pointer">Mô tả</div>
                 <span class="w-[93px] h-[1px] bg-black absolute bottom-[-1px]"></span>
             </div>
-            updating...
+            Đang cập nhật...
         </div>
         <div class="max-w-[1540px] m-auto truncate">
             <div class="title text-[20px] font-[600] flex justify-between">Bạn có thể thích <div class="text-[30px] text-gray-400"></div>
