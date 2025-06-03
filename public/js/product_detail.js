@@ -368,7 +368,7 @@ function isCart() {
       myCartMore.innerHTML = "More...";
     } else {
       if (childElements.length == 0) {
-        myCartMore.innerHTML = "There are no products in the shopping cart";
+        myCartMore.innerHTML = "Giỏ hàng của bạn hiện chưa có sản phẩm nào.";
       } else {
         myCartMore.innerHTML = "";
       }
@@ -394,7 +394,7 @@ function rmvCart() {
     containerParentCart_1.forEach((oppElement) => {
       const childElements = oppElement.children;
       if (childElements.length == 1) {
-        parentCart_1.innerHTML = "There are no products in the shopping cart";
+        parentCart_1.innerHTML = "Giỏ hàng của bạn hiện chưa có sản phẩm nào.";
         parentCart_1.style.padding = "0.5rem";
       } else {
         parentCart_1.innerHTML = "";
